@@ -1,0 +1,173 @@
+body {
+  background: linear-gradient(270deg, #1d104d 0%, #08031a 100%);
+  background-repeat: no-repeat;
+}
+/* #header {
+  display: flex;
+} */
+nav {
+  display: flex;
+}
+h1 {
+  font-family: "Tomorrow", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+}
+.header1 {
+  display: flex;
+  flex: 1;
+}
+.header2 {
+  display: flex;
+  flex: 1;
+}
+.header2 div {
+  padding: 10px;
+}
+.headerImg {
+  /* background-image: url(images/Subtract.png);
+  background-repeat: no-repeat; */
+  position: relative;
+  color: white;
+  font-family: "Tomorrow", sans-serif;
+}
+.center {
+  position: absolute;
+  /* top: 50%;
+  left: 50%; */
+  top: 0%;
+  left: 25%;
+}
+/* #solution {
+  position: relative;
+} */
+/* #solution img {
+  position: absolute;
+} */
+.cross1 {
+  position: absolute;
+  /* bottom: 100px;
+  right: 100px; */
+  bottom: 50px;
+  right: 10%;
+}
+.cross2 {
+  position: absolute;
+}
+.cross3 {
+  position: absolute;
+  top: 30px;
+  right: 20%;
+}
+#solution div {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  /* color: white; */
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* width: 200px; */
+  /* align-items: center; */
+  /* width: 50%; */
+  /* width: 400px; */
+  padding: 8rem;
+}
+#solution p {
+  color: #7873a3;
+  text-align: center;
+  font-family: "Tomorrow", sans-serif;
+  font-style: normal;
+}
+#solution h3 {
+  color: white;
+  text-align: center;
+  font-family: "Tomorrow", sans-serif;
+  font-style: normal;
+
+  /* display: flex;
+  flex-direction: column; */
+}
+.solution_text {
+  position: relative;
+}
+.Arrow {
+  position: absolute;
+  z-index: -1;
+  left: 20%;
+}
+/* .solution_img {
+  height: 100%;
+  width: 300px;
+} */
+
+/* About_us */
+#about-us {
+  padding: 5rem;
+}
+.aboutus_container {
+  display: flex;
+  /* padding: 4rem; */
+}
+.aboutus_text {
+  font-family: "Tomorrow", sans-serif;
+  color: #d9e0f4;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 35px;
+}
+.aboutus_video {
+  /* display: flex;
+  justify-content: center; */
+  margin: auto;
+}
+#sponsors {
+  padding: 5rem;
+}
+.sponsors1 {
+  margin-bottom: 2rem;
+}
+.sponsors_row {
+  display: flex;
+  /* margin: 2rem; */
+  /* flex: 1; */
+  width: 100%;
+  justify-content: space-between;
+}
+.card {
+  background-image: url(images/border.png);
+  background-repeat: no-repeat;
+  width: 400px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+.sponsor_img {
+  height: 5rem;
+  width: 10rem;
+  margin-top: 30px;
+  /* justify-content: center;
+  align-items: center; */
+}
+/* .sponsor_img {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  text-align: center;
+} */
+
+/* statistics */
+#statistics {
+  padding: 5rem;
+}
+.statistics_row {
+  display: flex;
+  justify-content: space-between;
+}
+.group {
+  margin: 40px;
+}
