@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>form</title>
+	</head>
+	<body>
+		<form action="" class="register-form">
+			<label for="email">enter email</label>
+			<input type="email" name="email" class="email" />
+			<label for="password">enter password</label>
+			<input type="password" name="password" class="password" />
+			<button class="register">register</button>
+			<button class="login">login</button>
+			<button class="sign-out">sign out</button>
+			<button class="google-login">google login</button>
+			<button class="create-doc">Create Doc</button>
+			<button class="change-doc">change Doc</button>
+			<button class="event-reg" id="code-red">event reg</button>
+			<button class="user-data">get user data</button>
+			<button class="leader-reg">leader reg</button>
+			<button class="member-reg">member reg</button>
+			<button class="one-add">1-add</button>
+			<button class="two-add">2-add</button>
+		</form>
+		<script type="module">
+			// Import the functions you need from the SDKs you need
+			import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.8/firebase-app.js";
+			// TODO: Add SDKs for Firebase products that you want to use
+			// https://firebase.gooFiregle.com/docs/web/setup#available-libraries
+
+			// Your web app's Firebase configuration
+			const firebaseConfig = {
+				apiKey: "AIzaSyBoPP1uJOmOl8qPxGQ8z4SK821gUAUXOls",
+				authDomain: "testing-4843e.firebaseapp.com",
+				projectId: "testing-4843e",
+				storageBucket: "testing-4843e.appspot.com",
+				messagingSenderId: "639151628755",
+				appId: "1:639151628755:web:4e26ff5ffa2affcfbccf26",
+			};
+
+			// Initialize Firebase
+			const app = initializeApp(firebaseConfig);
+		</script>
+		<script type="module" src="./login.js"></script>
+		<script type="module" src="./database.js"></script>
+		<script type="module" src="./groupReg.js"></script>
+		<script type="module" src="./test.js"></script>
+	</body>
+</html>
