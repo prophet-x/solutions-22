@@ -1,0 +1,73 @@
+body {
+  margin: 0;
+}
+.body {
+  height: 95vh;
+  background: linear-gradient(270deg, #1d104d 0%, #08031a 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.card {
+  height: 80vh;
+  width: 80vw;
+  color: white;
+  background-color: black;
+  border: 3px solid rgb(25, 137, 182);
+  display: flex;
+  justify-content: space-between;
+}
+.box1 {
+  font-family: "Montserrat", sans-serif;
+  /* font-family: "Montserrat Subrayada", sans-serif;
+  font-family: "Rubik Wet Paint", cursive; */
+
+  font-size: xx-large;
+  font-weight: bolder;
+  margin: 1rem;
+}
+.box1,
+.box2,
+.box3,
+.box4,
+.box5 {
+  flex: 0.2;
+  margin: 1rem;
+}
+.box2 {
+  margin-top: 10rem;
+}
+.box3 {
+  margin-top: 4rem;
+}
+.box4 {
+  margin-top: 12rem;
+}
+.card1 {
+  height: 30%;
+  border: 3px solid white;
+  font-size: 700%;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  overflow: hidden;
+}
+.card2 {
+  border: 3px solid white;
+  padding: 1rem;
+  margin: 1rem;
+}
+.box5 {
+  display: flex;
+  align-items: flex-end;
+}
+footer {
+  color: white;
+
+  /* background-color: aqua; */
+  height: 5vh;
+}
+footer img {
+  width: 100%;
+  background: linear-gradient(270deg, #1d104d 0%, #08031a 100%);
+}
