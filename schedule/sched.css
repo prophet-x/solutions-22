@@ -29,7 +29,7 @@ body {
     bottom: 10%;
   }
   
-  .cards {
+  /* .cards {
     height: 106px;
     width: 364px;
     background: linear-gradient(
@@ -39,4 +39,68 @@ body {
     );
     border: 5px solid white;
     margin: 20px 20px;
+  } */
+/* .cards {
+  height: 50px;
+  width: 100px;
+  background: linear-gradient(
+    359.64deg,
+    #3e386c 0.31%,
+    rgba(91, 86, 130, 0) 99.69%
+  );
+  border: 5px solid white;
+  margin: 20px 20px;
+} */
+.cotenet {
+  height: 75px;
+  width: 200px;
+  background: linear-gradient(
+    359.64deg,
+    #3e386c 0.31%,
+    rgba(91, 86, 130, 0) 99.69%
+  );
+  justify-content: space-evenly;
+  border: 2px solid white;
+  margin: 20px 20px;
+}
+.date {
+  padding: 20px;
+
+  height: auto;
+  width: 100px;
+  background: linear-gradient(
+    359.64deg,
+    #3e386c 0.31%,
+    rgba(91, 86, 130, 0) 99.69%
+  );
+  justify-content: space-around;
+  border: 2px solid white;
+  margin: 20px 20px;
+  font-size: auto;
+  color: white;
+  text-align: justify;
+}
+.line {
+  height: 375px;
+  width: 2px;
+  background: linear-gradient(359.64deg, #35258d, #2069bf);
+}
+h1 {
+  padding: 0px;
+  font-size: 20px;
+  color: white;
+}
+h4 {
+  font-size: 18px;
+  color: white;
+  font-weight: lighter;
+}
+@media screen and (max-width: 480px) {
+  .cards {
+    height: auto;
+    width: auto;
+    background: black;
+    border: 5px solid white;
+    margin: 20px 20px;
   }
+}
