@@ -1,0 +1,125 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	background-color: #1e1a48;
+	font-family: "Tomorrow", sans-serif;
+}
+.event-card {
+	height: 75vh;
+	width: 85%;
+	max-width: 900px;
+	overflow: hidden;
+	position: relative;
+	padding: 0.5rem 2rem;
+	padding-right: 0;
+	color: white;
+	margin: 4rem auto;
+	border: 20px solid white;
+	/* add the border from figma export */
+	border-image: url(./Union.svg) stretch;
+	/* pushes the image outside the border by 10px */
+	border-image-outset: 10px;
+	/* slices the image from all 4 sides, you can simply write 30 in place of these values depending upon the type of border-image used */
+	border-image-slice: 45 0 30 45 fill;
+}
+#progressBarContainer {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 10px;
+	height: 100%;
+	background: #1e1a4856;
+}
+#progressBar {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 10px;
+	background: linear-gradient(to top, #3aabb4, #37398d);
+	height: 4px;
+	opacity: 0;
+}
+.card-wrapper {
+	height: 100%;
+	overflow-y: auto;
+	width: calc(100% + 20px);
+	padding-right: 2rem;
+}
+
+.description {
+	padding: 1rem 0;
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.event-details {
+	margin: 0.5rem 0rem;
+	width: 60%;
+}
+
+.detail-header {
+	display: inline-block;
+	border-bottom: 2px solid white;
+	margin: 0.75rem 0;
+}
+
+.event-details p:first-of-type {
+	display: inline;
+	font-size: 1.5rem;
+	font-weight: bolder;
+}
+.event-poster {
+	margin: 1rem 2rem 0 0;
+}
+.event-poster img {
+	height: 250px;
+}
+
+@media screen and (max-width: 700px) {
+	.event-card {
+		height: auto;
+		/* width: 90%; */
+	}
+	#progressBar,
+	#progressBarContainer {
+		display: none;
+	}
+	.description {
+		margin-top: 250px;
+		flex-flow: column;
+	}
+	.event-name {
+		display: inline-block;
+		margin: auto;
+	}
+	.event-details {
+		width: 100%;
+	}
+	.detail-header {
+		margin: 0.75rem auto;
+	}
+	.event-poster {
+		position: absolute;
+		top: 50px;
+		left: 20px;
+	}
+}
+@media screen and (max-width: 400px) {
+	.event-card {
+		padding: 0.5rem 1rem;
+		border: 20px solid white;
+		border-image: url(./Union\ -resp.svg) stretch;
+		border-image-outset: 10px;
+		border-image-slice: 45 0 30 45 fill;
+	}
+	.event-poster img {
+		height: 200px;
+		top: 50px;
+		left: 0px;
+		margin-left: -1rem;
+	}
+} ;
