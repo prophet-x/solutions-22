@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Orbitron&family=Tomorrow&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Tomorrow&display=swap");
 * {
   box-sizing: border-box;
   scrollbar-color: #4c369b #2e1e6a;
@@ -147,7 +148,6 @@ body main section#about-us .rugged-card {
   border-image-slice: 45 10 45 fill;
 }
 body main section#about-us .rugged-card .text-content {
-  overscroll-behavior: contain;
   width: calc(50% + 0.5rem);
   max-height: 100%;
   overflow: auto;
