@@ -5,25 +5,63 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Solutions 22</title>
+
+	<meta property="og:title" content="Solutions 22" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="__website-url__" />
+	<meta property="og:description" content="Technical Board. Army Institute of Technology, Pune." />
+	<meta property="og:image" content="__https://absolute/path/to/image.png__" />
+	<meta property="og:image:width" content="__dimensions-x__" />
+	<meta property="og:image:height" content="__dimensions-y__" />
+
+	<meta name="twitter:title" content="Solutions 22" />
+	<meta name="twitter:description" content=" Technical Board. Army Institute of Technology, Pune." />
+	<meta name="twitter:image" content="__https://absolute/path/to/image.png__" />
+	<meta name="twitter:card" content="summary_large_image" />
+
 	<link rel="stylesheet" href="./styles.css">
+	<script defer src="./index.js"></script>
 </head>
 <body>
 	<header>
 		<nav>
+			<a href="javascript:void(0)" id="mobile-nav-menu" role="button" tabindex="0">
+				<img src="./assets/navbar/nav-icon-button-menu.svg" alt="Menu">
+			</a>
 			<ul>
-				<li><a title="Home" id="nav-link-home" href="#hero-page" class="--current">Home</a></li>
-				<li><a title="Events" id="nav-link-events" href="__events__">Events</a></li>
-				<li><a title="Our Team" id="nav-link-team" href="__team__">Our Team</a></li>
-				<li><a title="Schedule" id="nav-link-schedule" href="__schedule__">Schedule</a></li>
-				<li><a title="Account" id="nav-link-account" href="__account__"></a></li>
+				<li style="--item-number: 0;"><a title="Home" id="nav-link-home" href="#hero-section">
+					<span>Home</span>
+					<img src="./assets/navbar/nav-icon-button-home.svg" alt="Home">
+				</a></li>
+				<li style="--item-number: 1;"><a title="Events" id="nav-link-events" href="__events__">
+					<span>Events</span>
+					<img src="./assets/navbar/nav-icon-button-events.svg" alt="Events">
+				</a></li>
+				<li style="--item-number: 2;"><a title="Our Team" id="nav-link-team" href="__team__">
+					<span>Our Team</span>
+					<img src="./assets/navbar/nav-icon-button-team.svg" alt="Our Team">
+				</a></li>
+				<li style="--item-number: 3;"><a title="Schedule" id="nav-link-schedule" href="__schedule__">
+					<span>Schedule</span>
+					<img src="./assets/navbar/nav-icon-button-schedule.svg" alt="Schedule">
+				</a></li>
+				<li style="--item-number: 4;"><a title="Account" id="nav-link-account" href="__account__">
+					<img src="./assets/navbar/nav-icon-button-account.svg" alt="Account">
+				</a></li>
 			</ul>
 		</nav>
 	</header>
 
 	<main>
 		<section id="hero-section" title="Solutions 2022">
+			<div id="institute-title" class="hero-content-text">
+				Army Institute of Technology, Pune
+			</div>
+			<div id="board-title" class="hero-content-text">
+				Technical Board
+			</div>
 			<img id="hero-content-svg" src="./assets/hero-content.svg" alt="Hero content">
-			<div id="event-period-dates">
+			<div id="event-period-dates" class="hero-content-text">
 				XXth May - XXth May
 			</div>
 		</section>
@@ -70,7 +108,7 @@
 			<section>
 				<h2>Site map</h2>
 				<ul>
-					<li><a title="Home" href="#hero-page">Home</a></li>
+					<li><a title="Home" href="#hero-section">Home</a></li>
 					<li><a title="About" href="#about-us">About</a></li>
 					<li><a title="Sponsors" href="#sponsors">Sponsors</a></li>
 				</ul>
@@ -79,16 +117,16 @@
 				<h2>Follow us on</h2>
 				<ul id="socials-links">
 					<li><a title="Github" href="__github__">
-						<img src="./assets/social-github.svg" alt="Github">
+						<img src="./assets/socials/social-github.svg" alt="Github">
 					</a></li>
 					<li><a title="Instagram" href="__instagram__">
-						<img src="./assets/social-instagram.svg" alt="Instagram">
+						<img src="./assets/socials/social-instagram.svg" alt="Instagram">
 					</a></li>
 					<li><a title="LinkedIn" href="__linkedin__">
-						<img src="./assets/social-linkedin.svg" alt="LinkedIn">
+						<img src="./assets/socials/social-linkedin.svg" alt="LinkedIn">
 					</a></li>
 					<li><a title="Facebook" href="__facebook__">
-						<img src="./assets/social-facebook.svg" alt="Facebook">
+						<img src="./assets/socials/social-facebook.svg" alt="Facebook">
 					</a></li>
 				</ul>
 			</section>
