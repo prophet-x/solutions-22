@@ -160,7 +160,6 @@ h1 {
 @font-face {
   font-family: tomoregular;
   src: url(fonts/Tomorrow-Regular.ttf);
-
   @font-face {
     font-family: tomobold;
     src: url(fonts/Tomorrow-Medium.ttf);
@@ -178,9 +177,9 @@ h4 {
 }
 
 @media screen and (max-width: 720px) {
-
-  h2 {
-
+  
+  h2{
+ 
     height: 10px;
     width: 10px;
     color: white;
@@ -188,16 +187,16 @@ h4 {
     margin-top: 50px;
     font-size: xx-large;
     font-family: tomosemibold;
-
+ 
   }
-
+ 
   .cards {
-
+   
     height: auto;
     width: auto;
-
+   
     border: 20px solid white;
-    border-image: url(./Union.svg) stretch;
+    border-image: url(./Unionandriod.svg) stretch;
     border-image-outset: 10px;
     border-image-slice: 45 45 45 45 fill;
     margin: 20px 20px;
@@ -222,24 +221,21 @@ h4 {
     width: 60vw;
     height: 10vh;
   }
-
-  .date {
+  .date{
     position: relative;
     right: -32%;
     top: 2px;
     height: 0.7rem;
-    width: 4rem;
+  width: 4rem;
   }
 }
-
 @media screen and (max-width: 1376px) and (min-width: 720px) {
-
-  .line {
+  
+  .line{
     height: 0;
     width: 0;
 
   }
-
   main {
     width: 70vw;
     height: 143vh;
@@ -262,25 +258,60 @@ h4 {
     right: 15%;
     bottom: 12%;
   }
-
-  .date {
+  .date{
     position: relative;
     right: -25%;
     top: 2px;
     height: 0.7rem;
-    width: 4rem;
-    margin-bottom: 30px;
-  }
-
-  .cards {
-    margin-left: 60px;
-  }
-
-  /* h2{
+  width: 4rem;
+  margin-bottom: 30px;
+}
+.cards{
+  margin-left: 60px;
+}
+/* h2{
   color: white;
   position: absolute;
   right: 60%;
   font-family: tomosemibold;
   font-size: xx-large;
 } */
+}
+ 
+@media screen AND (max-width:1086px) and (min-width:721px) {
+  .line{
+    height: 0;
+    width: 0;
+
+  }
+  main {
+    width: 70vw;
+    height:160vh;
+    border: 3px;
+    /*  */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+    border: 20px solid white;
+    border-image: url(./Union.svg) stretch;
+    border-image-outset: 10px;
+    border-image-slice: 45 45 45 60 fill;
+    border-color: white;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 15%;
+    right: 15%;
+    bottom: 12%;
+  }
+  .date{
+    position: relative;
+    right: -25%;
+    top: 2px;
+    height: 0.7rem;
+  width: 4rem;
+  margin-bottom: 30px;
+}
 }
