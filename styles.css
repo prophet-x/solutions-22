@@ -147,7 +147,6 @@ body main section#about-us .rugged-card {
   border-image-slice: 45 10 45 fill;
 }
 body main section#about-us .rugged-card .text-content {
-  overscroll-behavior: contain;
   width: calc(50% + 0.5rem);
   max-height: 100%;
   overflow: auto;
