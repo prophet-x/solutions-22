@@ -1,5 +1,5 @@
-<svg width="60" height="60" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-<circle r="20.8586" transform="matrix(-1 0 0 1 20.8586 20.8586)" fill="#FFB9D5"/>
+<svg width="50" height="50" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle r="20.8586" transform="matrix(-1 0 0 1 20.8586 20.8586)" fill="#06BDFC"/>
 <path d="M22.6788 18.4121H13.6202V20.6767H22.6788V18.4121Z" fill="#140A34"/>
 <path d="M27.2081 13.8828H13.6202V16.1475H27.2081V13.8828Z" fill="#140A34"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M9.10228 11.6182C9.10228 10.3726 10.11 9.35352 11.3556 9.35352H29.4728C30.7183 9.35352 31.7374 10.3726 31.7374 11.6182V25.206C31.7374 26.4516 30.7183 27.4707 29.4728 27.4707H13.6202L9.09094 32L9.10228 11.6182ZM29.4728 11.6182H11.3556V26.5309L12.6804 25.206H29.4728V11.6182Z" fill="#140A34"/>
