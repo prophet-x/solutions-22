@@ -203,6 +203,22 @@ body footer .footer-content section ul#socials-links li {
   margin: 0;
 }
 
+#canvas-container{
+  position: fixed;
+  z-index: 1;
+}
+
+.--blur{
+  filter: blur(3px);
+  pointer-events: none;
+}
+
+.--lock-body{
+  margin: 0; 
+  height: 100%; 
+  overflow: hidden
+}
+
 @media screen and (max-width: 1000px) {
   body header {
     position: fixed;
@@ -262,6 +278,7 @@ body footer .footer-content section ul#socials-links li {
   body header nav ul li a img {
     transform: rotateZ(calc(-1 * (18deg + 36deg * var(--item-number))));
     display: unset;
+    filter: drop-shadow(4px 6px 6px black);
   }
   body header nav.--open ul li {
     transform: translateX(-50%) rotateZ(calc(18deg + 36deg * var(--item-number)));
