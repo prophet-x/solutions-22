@@ -33,7 +33,7 @@
   align-items: center;
   text-align: center;
   font-size: 5rem;
-  opacity: 0.1;
+  /* opacity: 0.1; */
   padding: 1rem;
 }
 
@@ -309,3 +309,7 @@ body footer .footer-content section ul#socials-links li {
 }
 
 /*# sourceMappingURL=styles.css.map */
+div.coming-soon
+{
+    color: #06BDFC;
+}
