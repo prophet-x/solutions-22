@@ -56,7 +56,7 @@ body {
 }
 body header {
   user-select: none;
-  position: absolute;
+  position: relative;
   z-index: 1000;
   inset: 0;
 }
