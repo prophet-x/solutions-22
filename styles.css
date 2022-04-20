@@ -577,3 +577,58 @@ form {
     border-image-slice: 40% 0 20 30 fill;
   }
 }
+/*  poster addition */
+#valorant{
+  background-image: url("./assets/posters/valorant.png");
+}
+#bgmi{
+  background-image: url("./assets/posters/bgmi.png");
+}
+#clashRoyale{
+  background-image: url("./assets/posters/clashRoyale.png");
+}
+#solidworks{
+  background-image: url("./assets/posters/solidworks.png");
+}
+#nandit{
+  background-image: url("./assets/posters/nandit.png");
+}
+#techMatrix{
+  background-image: url("./assets/posters/techmatrix.png");
+}
+#ideaPresentation{
+  background-image: url("./assets/posters/ideaPresentation.png");
+}
+#palcementApti{
+  background-image: url("./assets/posters/placementApti.png");
+}
+#schoolEvent{
+  background-image: url("./assets/posters/modelMaking.png");
+}
+#photography{
+  background-image: url("./assets/posters/photography.png");
+}
+#movieMaking{
+  background-image: url("./assets/posters/movieMaking.png");
+}
+#bugOff{
+  background-image: url("./assets/posters/bugOff.png");
+}
+#codeRed{
+  background-image: url("./assets/posters/codered.png");
+}
+#sheCodes{
+  background-image: url("./assets/posters/sheCode.png");
+}
+#gameJam{
+  background-image: url("./assets/posters/gameJam.png");
+}
+#rcRacing{
+  background-image: url("./assets/posters/rcRacing.jpg");
+  background-position: top;
+
+}
+#pickAndPlace{
+  background-image: url("./assets/posters/pickAndPlace.jpg");
+  background-position: top;
+}
