@@ -201,8 +201,10 @@
 		  
 		  <div class="left-border">
 			<div class="left-box event-btn" id="gaming-btn">Gaming</div>
-			<div class="left-box event-btn" id="core-btn">core Event</div>
-			<div class="left-box event-btn" id="open-btn">open event</div>
+			<div class="left-box event-btn" id="core-btn">Core Event</div>
+			<div class="left-box event-btn" id="open-btn">Open Event</div>
+			<div class="left-box event-btn" id="robotics-btn">Robotics</div>
+			<div class="left-box event-btn" id="isdf-btn">CyberSecurity</div>
 			<div class="left-box event-btn" id="coding-btn">coding</div>
 		  </div>
 		</div>
@@ -210,17 +212,17 @@
 			<div class="event-section" style="flex: 1;">
 				<div class="card-container" id="gaming">
 					<div class="event-card-border">
-						<div id="valorant" class="event-card">
+						<div id="valorant" onclick="eventRedirect(this)" class="event-card">
 							<p>VALORANT</p>
 						</div>
 					</div>
 					<div class="event-card-border">
-						<div id="bgmi" class="event-card">
+						<div id="bgmi" onclick="eventRedirect(this)" class="event-card">
 							<p>BGMI</p>
 						</div>
 					</div>
 					<div class="event-card-border">
-						<div id="clashRoyale" class="event-card">
+						<div id="clashRoyale" onclick="eventRedirect(this)" class="event-card">
 							<p>Clash Royale</p>
 						</div>
 					</div>
@@ -228,12 +230,12 @@
 
 				<div class="card-container display-none" id="core-events">
 					<div class="event-card-border">
-						<div id="solidworks" class="event-card">
+						<div id="solidworks" onclick="eventRedirect(this)" class="event-card">
 							<p>Solidworks</p>
 						</div>
 					</div>
 					<div class="event-card-border">
-						<div id="nandit" class="event-card">
+						<div id="nandit" onclick="eventRedirect(this)" class="event-card">
 							<p>NandIT</p>
 						</div>
 					</div>
@@ -241,54 +243,73 @@
 
 				<div class="card-container display-none" id="open-events">
 					<div class="event-card-border">
-						<div id="techMatrix" class="event-card">
+						<div id="techMatrix" onclick="eventRedirect(this)" class="event-card">
 							<p>TECH MATRIX</p>
 						</div>
 					</div>
 					<div class="event-card-border">
-						<div id='ideaPresentation' class="event-card">
+						<div id='ideaPresentation' onclick="eventRedirect(this)" class="event-card">
 							<p>Idea Presentation</p>
 						</div>
 					</div>
 					<div class="event-card-border">
-						<div id="palcementApti" class="event-card">
+						<div id="palcementApti" onclick="eventRedirect(this)" class="event-card">
 							<p>Placement Apti</p>
 						</div>
 					</div>
 					<div class="event-card-border">
-						<div id="SchoolEvent" class="event-card">
+						<div id="SchoolEvent" onclick="eventRedirect(this)" class="event-card">
 							<p>School Model Making</p>
 						</div>
 					</div>
 					<div class="event-card-border">
-						<div id="photography" class="event-card">
+						<div id="photography" onclick="eventRedirect(this)" class="event-card">
 							<p>Photography</p>
 						</div>
 					</div>
 					<div class="event-card-border">
-						<div id="movieMaking" class="event-card">
+						<div id="movieMaking" onclick="eventRedirect(this)" class="event-card">
 							<p>Movie Making</p>
 						</div>
 					</div>
 					<div class="event-card-border">
-						<div id="stockSimulation" class="event-card">
+						<div id="stockSimulation" onclick="eventRedirect(this)" class="event-card">
 							<p>Stock Simulation</p>
 						</div>
 					</div>
 				</div>
+
 				<div class="card-container display-none" id="coding">
 					<div class="event-card-border">
-						<div id="bugOff" class="event-card">
+						<div id="bugOff" onclick="eventRedirect(this)" class="event-card">
 							<p>BUG OFF</p>
 						</div>
 					</div>
 					<div class="event-card-border">
-						<div onclick="eventRedirect(this)" id="codeRed" class="event-card">
+						<div  id="codeRed" onclick="eventRedirect(this)" class="event-card">
 							<p>Code Red</p>
 						</div>
 					</div>
 					<div class="event-card-border">
-						<div id="sheCodes" class="event-card">
+						<div id="sheCodes" onclick="eventRedirect(this)" class="event-card">
+							<p>She Codes</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="card-container display-none" id="robotics">
+					<div class="event-card-border">
+						<div id="bugOff" onclick="eventRedirect(this)" class="event-card">
+							<p>BUG OFF</p>
+						</div>
+					</div>
+					<div class="event-card-border">
+						<div  id="codeRed" onclick="eventRedirect(this)" class="event-card">
+							<p>Code Red</p>
+						</div>
+					</div>
+					<div class="event-card-border">
+						<div id="sheCodes" onclick="eventRedirect(this)" class="event-card">
 							<p>She Codes</p>
 						</div>
 					</div>

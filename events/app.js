@@ -2,6 +2,7 @@ const gamingSection = document.getElementById("gaming");
 const coreSection = document.getElementById("core-events");
 const openEventSection = document.getElementById("open-events");
 const codingSection = document.getElementById("coding");
+const roboticsSection = document.getElementById("robotics");
 
 const gameBtn = document.getElementById("gaming-btn");
 const coreBtn = document.getElementById("core-btn");
@@ -34,6 +35,10 @@ function displayEventsCard(eventBtn) {
 			codingSection.classList.remove("display-none");
 			hideEventCards("coding");
 			break;
+		case "robotics-btn":
+			roboticsSection.classList.remove("display-none");
+			hideEventCards("robotics");
+			break;
 		default:
 			console.log("error");
 	}
@@ -59,6 +64,10 @@ function changeMobileSec(){
 			codingSection.classList.remove("display-none");
 			hideEventCards("coding");
 			break;
+		case 'robotics':
+			codingSection.classList.remove("display-none");
+			hideEventCards("robotics");
+			break;
 		default:
 			console.log("error");
 	}
@@ -66,7 +75,7 @@ function changeMobileSec(){
 }
 
 function hideEventCards(exceptionCardId) {
-	for (let index = 0; index < 4; index++) {
+	for (let index = 0; index < 5; index++) {
 		if (cards[index].id === exceptionCardId) {
 			continue;
 		} else {
@@ -76,5 +85,5 @@ function hideEventCards(exceptionCardId) {
 }
 
 function eventRedirect(e){
-alert(e.id)
+	window.open('../eventRegestration/index.html?eventID='+e.id, '_blank');
 }

@@ -45,7 +45,7 @@ var eventArray = [
    ];
   var eventDetails = [
   {
-    id:  0,
+    id:  'codeRed',
     title:  "Code Red",
     img:  "./image/codeRed.jpg",
     date:  "To be declared",
@@ -83,7 +83,7 @@ var eventArray = [
     
   },
   
-  { id: 3,
+  { id: 'sheCodes',
     title: "SHECODE",
     img: "./image/sheCodes.jpg",
     date: "To be declared",
@@ -403,58 +403,26 @@ var eventArray = [
         });
         return vars;   
     }
-    var chosenEventId = getUrlVars()["eventID"];
+    var eventId = getUrlVars()["eventID"];
+    //var isGroup = getUrlVars()['isGroup'];
   
   
-  var eventId = parseInt(chosenEventId);  // integer value to access the index
-  
-  var mainContent = document.querySelector(".main-content"); 
-  let displayData = ``; // for storing html content
-  
-  
+  //var eventId = parseInt(chosenEventId);  // integer value to access the index
+  //alert(eventId)
   window.addEventListener("DOMContentLoaded", function () {
     eventDetails.forEach(function (data) {
   
         if( data.id === eventId) {
-          displayData = 
-          `
-            <div class="three-container">
-            <div class="path">
-             
-            </div>
-           <br>
-            <div id="event-image">
-              <img src=${data.img} style=" position: relative; z-index: 2; padding-top:4%; width:50%" alt="placeholder">
-            </div>
-      
-            <br>
-            <br>
-            <h1 id="title">
-            ${data.title}
-    
-            </h1>
-            <div class="TimeAddress">
-              <br>
-              <b><u>Date</u> </b>: ${data.date}<br><b><u> Time</b></u> : ${data.time}<br> <b><u>Prize Worth</b></u> : ${data.prizeWorth}<br> <b><u>Team Size</b></u> : ${data.teamsize}</div>
-          </div>
-          <br>
-          <div class="description">
-            <h1>Description</h1>
-            <p>
-            ${data.descriptionUp}
-            </p>
-            <br>
-            <p>${data.paragraph}</p>
-            <br>
-            <p>
-            ${data.descriptionDown}
-            </p>
-          </div>
-          <br>
-          <div class="registerForEvent" id="upper" ><a class="line-anim" id="register-button-anchor">Register for event</a></div>
-        
-            `;}
+          document.getElementById('title').innerHTML = data.title;
+          document.getElementById('date').innerHTML = data.date;
+          document.getElementById('time').innerHTML = data.time;
+          document.getElementById('teamsize').innerHTML = data.date;
+          document.getElementById('prizeWorth').innerHTML = data.prizeWorth;
+          document.getElementById('descriptionUp').innerHTML = data.descriptionUp;
+          document.getElementById('paragraph').innerHTML = data.paragraph;
+          document.getElementById('descriptionDown').innerHTML = data.descriptionDown;
+
+        }
     });
-  
-    mainContent.innerHTML = displayData;
+    document.getElementsByClassName('event-reg')[0].id = eventId;
   });

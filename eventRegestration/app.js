@@ -6,3 +6,9 @@ eventCard.addEventListener("scroll", function scrollToBottom() {
 	progressBar.style.height = `${newProgressHeight}%`;
 	progressBar.style.opacity = `${newProgressHeight}%`;
 });
+
+const eventReg = document.querySelector('.event-reg');
+eventReg.addEventListener('click',function(){
+	
+});
+

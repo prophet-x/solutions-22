@@ -12,7 +12,7 @@ const registerForEvent = async () => {
 	// update user collection with event data
 	if (user.emailVerified) {
 		await setDoc(doc(db, 'users', user.uid, eventName, user.uid), {
-			eventID: '1',
+			eventID: eventName,
 			eventName: eventName,
 			time: new Date().toLocaleString()
 		});
