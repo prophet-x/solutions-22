@@ -39,6 +39,35 @@ const collegeValue = document.querySelector(".college-value");
 const mailValue = document.querySelector(".mail-value");
 const passwordValue = document.querySelector(".password-value");
 
+onAuthStateChanged(function(user) {
+
+	if (user) {
+	  var sss;
+		console.log("Successfully logged in!!")
+		var user = auth().currentUser;
+		db.collection("users").doc(user.uid)
+		.get().then((doc) => {
+			if (doc.exists) {
+				console.log("Document data:", doc.data())
+			} else {
+				// doc.data() will be undefined in this case
+				console.log("No such document!");
+			}
+		}).catch((error) => {
+			console.log("Error getting document:", error);
+		});
+  
+		
+  
+  
+  
+	} else {
+  
+	  console.log("Not logged in!!")
+  
+	}
+  });
+
 // grab the form and prevent default behaviour which is sending PHP request
 const form = document.querySelector(".register-form");
 form.onsubmit = function (e) {
