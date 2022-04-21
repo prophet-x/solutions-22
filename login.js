@@ -25,15 +25,19 @@ const auth = getAuth();
 const db = getFirestore();
 const provider = new GoogleAuthProvider();
 
-const email = document.querySelector(".email");
-const password = document.querySelector(".password");
-const register = document.querySelector(".register");
-const login = document.querySelector(".login");
+const register = document.querySelector(".register-btn");
+const login = document.querySelector(".elogin");
 const sOut = document.querySelector(".sign-out");
-const googleLogin = document.querySelector(".google-login");
+const googleLogin = document.querySelector(".glogin");
+
+const loginUserNameValue = document.querySelector(".email");
+const loginPasswordValue = document.querySelector(".password");
 const forgotPassword = document.querySelector(".forgot-password");
-email.value = "risabhrai2001@gmail.com";
-password.value = "123456789";
+
+const userNameValue = document.querySelector(".username-value");
+const collegeValue = document.querySelector(".college-value");
+const mailValue = document.querySelector(".mail-value");
+const passwordValue = document.querySelector(".password-value");
 
 // grab the form and prevent default behaviour which is sending PHP request
 const form = document.querySelector(".register-form");
@@ -42,6 +46,7 @@ form.onsubmit = function (e) {
 };
 
 const writeUserData = async (user) => {
+	console.log(user);
 	await setDoc(doc(db, "users", user.uid), {
 		userName: user.displayName,
 		college: "",
@@ -50,12 +55,12 @@ const writeUserData = async (user) => {
 };
 
 const registerUser = () => {
-	const emailValue = email.value;
-	const passwordValue = password.value;
-
-	createUserWithEmailAndPassword(auth, emailValue, passwordValue)
-		.then((userCredential) => {
-			const user = userCredential.user;
+	const emailValue = mailValue.value;
+	const passwordCode = passwordValue.value;
+	
+	createUserWithEmailAndPassword(auth, emailValue, passwordCode)
+	.then((userCredential) => {
+		const user = userCredential.user;
 			console.log("USER", user);
 			sendEmailVerification(auth.currentUser).then(() => {
 				console.log("VERIFICATION MAIL SENT");
@@ -66,12 +71,15 @@ const registerUser = () => {
 			const errorMessage = error.message;
 			console.log("error message", errorMessage);
 		});
-};
+	};
 
 const loginUser = () => {
+	const emailValue = document.querySelector(".login-email");
+	const passwordCode = document.querySelector(".login-password");
+	console.log("values",emailValue, passwordValue)
 	const user = auth.currentUser;
 	if (user.emailVerified) {
-		signInWithEmailAndPassword(auth, email.value, password.value)
+		signInWithEmailAndPassword(auth, emailValue.value, passwordCode.value)
 			.then((userCredential) => {
 				const user = userCredential.user;
 				console.log("SIGNED IN", user);

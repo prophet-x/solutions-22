@@ -12,7 +12,7 @@ const registerForEvent = async () => {
 	// update user collection with event data
 	if (user.emailVerified) {
 		await setDoc(doc(db, 'users', user.uid, eventName, user.uid), {
-			eventID: '1',
+			eventID: eventName,
 			eventName: eventName,
 			time: new Date().toLocaleString()
 		});
@@ -28,6 +28,20 @@ const registerForEvent = async () => {
 		console.log('get email verified');
 	}
 	console.log('data written');
+	alert_creator("Successfully Registered for the event.");
+
 }
+
+function alert_creator(msg){
+	var data = '<div class="alert alert-warning alert-dismissible " role="alert" > ' +
+		   msg + 
+		  '<button type="button" class="close" data-dismiss="alert" aria-label="Close" id="cls-alrt"> \
+			<span aria-hidden="true">&times;</span> \
+		  </button> \
+		</div>';
+	document.getElementById('alert_container').innerHTML = data;
+	document.getElementById("cls-alrt").onclick = function(){
+		document.getElementById('alert_container').innerHTML = "";	}
+  }
 
 eventReg.addEventListener('click', registerForEvent);

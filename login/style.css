@@ -42,13 +42,17 @@ body {
 }
 
 .modal {
+  border-style: solid;
+  border-color: transparent;
+  border-width: 15px 15px 20px 15px;
+  border-image: url("./asset/border.svg") 0% 30 50 30 fill / 1 / 0 stretch;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   /* width: 38%; */
 
-  background-color: black;
+  /* background-color: black; */
   /* padding: 6rem; */
   border-radius: 5px;
   box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
@@ -88,12 +92,15 @@ body {
   font-family: "Tomorrow";
   font-style: normal;
   font-weight: 500;
-  font-size: 24px;
-  line-height: 29px;
-  border-style: none;
+  font-size: 20px;
+  top: -36px;
+  position: relative;
   margin: 0;
-  padding: 0;
+  padding: 10px 15px;
+  border: 3px solid #34248b;
+  left: -5px;
 }
+
 input {
   font-family: "Tomorrow";
   font-style: normal;
@@ -112,7 +119,7 @@ input:focus {
 .loginbox {
   /* background: black;
    */
-  background-color: black;
+  /* background-color: black; */
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
   display: flex;
   flex-direction: column;
@@ -172,7 +179,7 @@ form {
   border-width: 14px 0px 10px 12px;
   border-image: url(./asset/brd2.svg) stretch;
   border-image-slice: 40% 0 20 30 fill;
-  margin-right:5px;
+  margin-right: 5px;
   margin-left: 5px;
 }
 
@@ -236,11 +243,11 @@ form {
     justify-items: center;
     flex-direction: column;
   }
-.login{
-  margin-left: 5px;
-  margin-right: 5px;
-}
-  .fg{
+  .login {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  .fg {
     text-align: center;
   }
   .signupinputs1 {
@@ -252,11 +259,6 @@ form {
     flex-wrap: wrap;
   }
 
-  .tab {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-  }
   .dn {
     margin-top: 20px;
     border: solid transparent;

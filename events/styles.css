@@ -3,7 +3,6 @@ body {
   box-sizing: border-box;
   color: white;
   background: linear-gradient(270deg, #1d104d 0%, #08031a 100%);
-  height: 100vh;
 }
 body header nav ul {
   list-style-type: none;
@@ -40,16 +39,16 @@ body header nav ul li a#nav-link-account {
 }
 header {
   height: 8vh;
-  background: linear-gradient(270deg, #1d104d 0%, #08031a 100%);
-  margin-bottom: 1rem;
 }
 main {
   display: flex;
   padding: 2rem;
+  min-height: 100vh;
 }
 main .left-side {
   flex: 0.25;
   min-height: 60vh;
+  max-height: 80vh;
   /* background-color: aqua; */
   margin: 2rem;
 }
@@ -78,7 +77,7 @@ main .right-side {
   height: 30%;
   width: 100%;
 } */
-.box {
+/* .box {
   margin: 2rem;
   position: relative;
   width: 40%;
@@ -87,12 +86,12 @@ main .right-side {
   border-image-outset: 25px;
   border-image-slice: 45 0 30 45 fill;
   font-family: "Montserrat Alternates", sans-serif;
-}
+} */
 .box img {
   margin-bottom: 0;
   display: flex;
   align-items: flex-end;
-  position: absolute;
+  /* position: absolute; */
   bottom: 0;
 }
 
@@ -112,24 +111,29 @@ main .right-side {
 }
 .left-box {
   border: 18px solid white;
+  font-family: revert;
   border-image: url(./box.png) stretch;
   border-image-outset: 5px;
   border-image-slice: 45 0 30 45 fill;
 }
 
+#selectedSection{
+  display: none;
+}
+
 @media screen and (max-width: 1200px) {
-  header {
-    visibility: hidden;
+  #selectedSection{
+    display: block;
   }
   main {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     margin: 0;
     align-items: center;
     justify-content: center;
   }
   main .left-side {
-    visibility: hidden;
+    display: none;
     flex: 0;
     width: 0;
     margin: 0px;
@@ -155,4 +159,137 @@ main .right-side {
     align-items: center;
     justify-content: center;
   }
+}
+
+
+.links {
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+}
+
+
+.card-container {
+	display: flex;
+	width: 80%;
+  min-height: 80%;
+	flex-wrap: wrap;
+  align-items: center;
+	margin: 4rem auto;
+	background-color: black;
+	border: 20px solid white;
+	border-image: url("./Union.png");
+	border-image-slice: 30;
+	border-image-outset: 18px;
+}
+
+.fade-enter-card {
+	transition: opacity 0.5s ease-in;
+	-webkit-animation: fadeenter 1s linear forwards;
+	animation: fadeenter 1s linear forwards;
+	opacity: 0;
+}
+
+.fade-exit-card {
+	transition: opacity 0.5s ease-in;
+	-webkit-animation: fadeinout 1s linear forwards;
+	animation: fadeinout 1s linear forwards;
+	opacity: 0;
+}
+
+@keyframes fadeinout {
+	50% {
+		opacity: 1;
+	}
+	99% {
+		opacity: 0;
+	}
+	100% {
+		height: 0px;
+		width: 0;
+	}
+}
+@keyframes fadeenter {
+	50% {
+		opacity: 0;
+	}
+	99% {
+		opacity: 1;
+	}
+	100% {
+	}
+}
+
+.event-card-border {
+	margin: 1rem auto;
+	display: flex;
+	justify-content: center;
+	height: 220px;
+	width: 220px;
+	border-radius: 8px;
+	background: linear-gradient(to bottom, #bafeff7b, #37388e);
+}
+.event-card {
+	width: 95%;
+	height: 95%;
+	margin: auto;
+	position: relative;
+	background-image: linear-gradient(to bottom, #45c3c57b, #37388e),
+		url("./valorant.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	border-radius: 8px;
+	transition: 0.2s ease-in;
+}
+
+.event-card:hover {
+	transform: scale(1.1);
+}
+
+.event-card p {
+	position: absolute;
+	bottom: 5%;
+	left: 5%;
+	color: white;
+	letter-spacing: 2px;
+	font-family: "Orbitron", sans-serif;
+	font-weight: 900;
+}
+
+
+.display-none {
+	display: none;
+}
+
+select {
+  /* Reset */
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: 0;
+  outline: 0;
+  font: inherit;
+  /* Personalize */
+  width: 20em;
+  height: 3em;
+  padding: 0 4em 0 1em;
+  background: url(https://upload.wikimedia.org/wikipedia/commons/9/9d/Caret_down_font_awesome_whitevariation.svg) no-repeat right 0.8em center/1.4em, linear-gradient(to left, rgba(255, 255, 255, 0.3) 3em, rgba(255, 255, 255, 0.2) 3em);
+  color: white;
+  border-radius: 0.25em;
+  box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  /* <option> colors */
+  /* Remove focus outline */
+  /* Remove IE arrow */
+}
+select option {
+  color: inherit;
+  background-color: #320a28;
+}
+select:focus {
+  outline: none;
+}
+select::-ms-expand {
+  display: none;
 }
