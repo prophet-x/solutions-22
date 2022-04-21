@@ -31,6 +31,31 @@ const registerForEvent = async () => {
 	console.log('data written');
 	alert_creator("Successfully Registered for the event.");
 
+	if (eventName=='bgmi'){
+		window.location.href = 'https://forms.gle/iZkjUKvmWp1P9ycw7';
+	}
+	else if (eventName=='solidworks'){
+		window.location.href = 'https://forms.gle/4JoxoGymapBdFmQy6'
+	}
+	else if (eventName=='nandit'){
+		window.location.href = 'https://forms.gle/hxvccLzm7ZcLiYEZA'
+	}
+	else if (eventName=='valorant'){
+		window.location.href = 'https://forms.gle/zLMT17Ucrqg8UAwt9'
+	}
+	else if (eventName=='ideaPresentation'){
+		window.location.href = 'https://forms.gle/anirmLxorcnus5288'
+	}
+	else if (eventName=='rcRacing'){
+		window.location.href = 'https://forms.gle/7KuKFYuhW8vCVj288'
+	}
+	else if (eventName=='pickAndPlace'){
+		window.location.href = 'https://forms.gle/J6Z4NNESBjAM56hW6'
+	}
+
+	else if (eventName=='gameJam'){
+		window.location.href = 'https://forms.gle/aDcHTzTbhYiTCUoT9'
+	}
 }
 
 function alert_creator(msg){
