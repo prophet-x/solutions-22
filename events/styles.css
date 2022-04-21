@@ -77,7 +77,7 @@ main .right-side {
   height: 30%;
   width: 100%;
 } */
-.box {
+/* .box {
   margin: 2rem;
   position: relative;
   width: 40%;
@@ -86,12 +86,12 @@ main .right-side {
   border-image-outset: 25px;
   border-image-slice: 45 0 30 45 fill;
   font-family: "Montserrat Alternates", sans-serif;
-}
+} */
 .box img {
   margin-bottom: 0;
   display: flex;
   align-items: flex-end;
-  position: absolute;
+  /* position: absolute; */
   bottom: 0;
 }
 
