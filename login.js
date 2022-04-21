@@ -21,7 +21,34 @@ import {
 	getDoc,
 	getDocs,
 } from "https://www.gstatic.com/firebasejs/9.6.8/firebase-firestore.js";
+
+const loginBtn = document.querySelector(".login-btn");
+const logoutBtn = document.querySelector(".logout-btn");
+
 const auth = getAuth();
+onAuthStateChanged(auth, (user) => {
+	if (user) {
+		loginBtn.innerHTML = `<a title="Account" id="nav-link-account">
+		<img src="./assets/navbar/nav-icon-button-account.svg" alt="Account">
+		</a>`;
+		console.log("user");
+		logoutBtn.classList.remove("display-none");
+	} else {
+		loginBtn.innerHTML = `<a title="Account" id="login-btn-border" >Login
+		</a>`;
+		loginBtn.style.padding = "0";
+		console.log("not user");
+		document
+			.getElementById("login-btn-border")
+			.addEventListener("click", function (e) {
+				document.getElementById("modal").classList.toggle("hidden");
+				document.getElementById("overlay").classList.toggle("hidden");
+				document.querySelector("body").classList.toggle("--lock-body");
+				console.log("clicked ");
+			});
+		logoutBtn.classList.add("display-none");
+	}
+});
 const db = getFirestore();
 const provider = new GoogleAuthProvider();
 
@@ -38,35 +65,6 @@ const userNameValue = document.querySelector(".username-value");
 const collegeValue = document.querySelector(".college-value");
 const mailValue = document.querySelector(".mail-value");
 const passwordValue = document.querySelector(".password-value");
-
-onAuthStateChanged(function(user) {
-
-	if (user) {
-	  var sss;
-		console.log("Successfully logged in!!")
-		var user = auth().currentUser;
-		db.collection("users").doc(user.uid)
-		.get().then((doc) => {
-			if (doc.exists) {
-				console.log("Document data:", doc.data())
-			} else {
-				// doc.data() will be undefined in this case
-				console.log("No such document!");
-			}
-		}).catch((error) => {
-			console.log("Error getting document:", error);
-		});
-  
-		
-  
-  
-  
-	} else {
-  
-	  console.log("Not logged in!!")
-  
-	}
-  });
 
 // grab the form and prevent default behaviour which is sending PHP request
 const form = document.querySelector(".register-form");
@@ -86,10 +84,10 @@ const writeUserData = async (user) => {
 const registerUser = () => {
 	const emailValue = mailValue.value;
 	const passwordCode = passwordValue.value;
-	
+
 	createUserWithEmailAndPassword(auth, emailValue, passwordCode)
-	.then((userCredential) => {
-		const user = userCredential.user;
+		.then((userCredential) => {
+			const user = userCredential.user;
 			console.log("USER", user);
 			sendEmailVerification(auth.currentUser).then(() => {
 				console.log("VERIFICATION MAIL SENT");
@@ -100,12 +98,12 @@ const registerUser = () => {
 			const errorMessage = error.message;
 			console.log("error message", errorMessage);
 		});
-	};
+};
 
 const loginUser = () => {
 	const emailValue = document.querySelector(".login-email");
 	const passwordCode = document.querySelector(".login-password");
-	console.log("values",emailValue, passwordValue)
+	console.log("values", emailValue, passwordValue);
 	const user = auth.currentUser;
 	if (user.emailVerified) {
 		signInWithEmailAndPassword(auth, emailValue.value, passwordCode.value)
