@@ -5,9 +5,10 @@ const auth = getAuth();
 
 const eventReg = document.querySelector('.event-reg');
 
+
 const registerForEvent = async () => {
 	const user = auth.currentUser;
-	const eventName = eventReg.getAttribute('id');
+	const eventName = getUrlVars()["eventID"];
 
 	// update user collection with event data
 	if (user.emailVerified) {

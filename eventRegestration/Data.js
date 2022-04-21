@@ -84,7 +84,7 @@ var eventArray = [
   
   },
   
-  { id: 'nandIt',
+  { id: 'nandit',
     title: "NAND IT",
     img: "./image/NandIt.png",
     date: "To be declared",
@@ -98,7 +98,7 @@ var eventArray = [
   },
   
   
-  {id: 'solidWorks',
+  {id: 'solidworks',
     title: "AutoCAD",
     img: "./image/autoCad.jpg",
     date: "To be declared",
@@ -218,7 +218,7 @@ var eventArray = [
   
   },
   
-  {id: 'bypassCtf',
+  {id: 'captureTheFlag',
   title: "<b><u>ByPass CTF</u></b>",
   img: "./image/isdf.png",
   date: "To be declared",
