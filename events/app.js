@@ -13,6 +13,12 @@ const codingBtn = document.getElementById("coding-btn");
 const eventBtn = document.querySelectorAll(".event-btn");
 const cards = document.querySelectorAll(".card-container");
 
+const navbar = document.querySelector(".navbar");
+console.log("navbar", navbar);
+navbar.children[0].addEventListener("click", function () {
+	navbar.classList.toggle("--open");
+});
+
 eventBtn.forEach(function triggerEventChoice(element) {
 	element.addEventListener("click", () => displayEventsCard(element));
 });

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 	<head>
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -57,7 +56,7 @@
 							Sign Up
 						</button>
 						<button
-							class="tablinks"
+							class="tablinks close-modal"
 							id="closeLoginModal"
 							style="width: 15%"
 						>
@@ -169,7 +168,7 @@
 								<img src="./assets/login_dash.svg" />
 							</div>
 							<div class="sub">
-								<button class="signupbut1">
+								<button class="signupbut1 google-reg">
 									<svg
 										style="
 											margin-right: 10px;
@@ -203,7 +202,6 @@
 										</g></svg
 									>Sign Up
 								</button>
-								<button class="register-btn">Register</button>
 							</div>
 						</div>
 					</div>
@@ -248,7 +246,7 @@
 							/>
 						</a>
 					</li>
-					<li style="--item-number: 2">
+					<!-- <li style="--item-number: 2">
 						<a
 							title="Our Team"
 							id="nav-link-team"
@@ -273,12 +271,19 @@
 								alt="Schedule"
 							/>
 						</a>
-					</li>
-					<li class="login-btn" style="--item-number: 4">
-						<a title="Account" id="login-btn-border">Login </a>
-					</li>
-					<li class="logout-btn" style="--item-number: 4">
-						<a class="sign-out" id="login-btn-border"> Log Out </a>
+					</li> -->
+					<li style="--item-number: 2">
+						<a
+							title="Account"
+							id="nav-link-account"
+							href="javascript:void(0)"
+						>
+							<span>Login</span>
+							<img
+								src="./assets/navbar/nav-icon-button-account.svg"
+								alt="Account"
+							/>
+						</a>
 					</li>
 				</ul>
 			</nav>
@@ -444,6 +449,7 @@
 		// Initialize Firebase
 		const app = initializeApp(firebaseConfig);
 	</script>
+	<script src="./login/script.js"></script>
 	<script type="module" src="./login.js"></script>
 	<script type="module" src="./database.js"></script>
 	<script type="module" src="./groupReg.js"></script>

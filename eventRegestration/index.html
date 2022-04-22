@@ -56,7 +56,7 @@
 							Sign Up
 						</button>
 						<button
-							class="tablinks"
+							class="tablinks close-modal"
 							id="closeLoginModal"
 							style="width: 15%"
 						>
@@ -202,7 +202,6 @@
 										</g></svg
 									>Sign Up
 								</button>
-								<button class="register-btn">Register</button>
 							</div>
 						</div>
 					</div>
@@ -213,7 +212,7 @@
 		<!--<canvas id="canvas-container"></canvas>-->
 		<div id="alert_container"></div>
 		<header>
-			<nav>
+			<nav class="navbar">
 				<a
 					href="javascript:void(0)"
 					id="mobile-nav-menu"
@@ -248,7 +247,7 @@
 							/>
 						</a>
 					</li>
-					<li style="--item-number: 2">
+					<!-- <li style="--item-number: 2">
 						<a
 							title="Our Team"
 							id="nav-link-team"
@@ -273,12 +272,20 @@
 								alt="Schedule"
 							/>
 						</a>
-					</li>
-					<li class="login-btn" style="--item-number: 4">
-						<a title="Account" id="login-btn-border">Login </a>
-					</li>
-					<li class="logout-btn" style="--item-number: 4">
-						<a class="sign-out" id="login-btn-border"> Log Out </a>
+					</li> -->
+					<li style="--item-number: 2">
+						<a
+							title="Account"
+							id="nav-link-account"
+							href="javascript:void(0)"
+							class="show-modal"
+						>
+							<span>Login</span>
+							<img
+								src="./assets/navbar/nav-icon-button-account.svg"
+								alt="Account"
+							/>
+						</a>
 					</li>
 				</ul>
 			</nav>
@@ -449,9 +456,9 @@
 		// Initialize Firebase
 		const app = initializeApp(firebaseConfig);
 	</script>
+	<script src="../login/script.js"></script>
 	<script type="module" src="../login.js"></script>
 	<script type="module" src="../database.js"></script>
 	<script type="module" src="../groupReg.js"></script>
 	<script src="./app.js"></script>
-	<script src="../index.js"></script>
 </html>

@@ -7,8 +7,11 @@ eventCard.addEventListener("scroll", function scrollToBottom() {
 	progressBar.style.opacity = `${newProgressHeight}%`;
 });
 
-const eventReg = document.querySelector('.event-reg');
-eventReg.addEventListener('click',function(){
-	
-});
+const eventReg = document.querySelector(".event-reg");
+eventReg.addEventListener("click", function () {});
 
+const navbar = document.querySelector(".navbar");
+
+navbar.children[0].addEventListener("click", function () {
+	navbar.classList.toggle("--open");
+});
