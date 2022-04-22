@@ -26,29 +26,6 @@ const loginBtn = document.querySelector(".login-btn");
 const logoutBtn = document.querySelector(".logout-btn");
 
 const auth = getAuth();
-onAuthStateChanged(auth, (user) => {
-	if (user) {
-		loginBtn.innerHTML = `<a title="Account" id="nav-link-account">
-		<img src="./assets/navbar/nav-icon-button-account.svg" alt="Account">
-		</a>`;
-		console.log("user");
-		logoutBtn.classList.remove("display-none");
-	} else {
-		loginBtn.innerHTML = `<a title="Account" id="login-btn-border" >Login
-		</a>`;
-		loginBtn.style.padding = "0";
-		console.log("not user");
-		document
-			.getElementById("login-btn-border")
-			.addEventListener("click", function (e) {
-				document.getElementById("modal").classList.toggle("hidden");
-				document.getElementById("overlay").classList.toggle("hidden");
-				document.querySelector("body").classList.toggle("--lock-body");
-				console.log("clicked ");
-			});
-		logoutBtn.classList.add("display-none");
-	}
-});
 const db = getFirestore();
 const provider = new GoogleAuthProvider();
 
@@ -56,6 +33,7 @@ const register = document.querySelector(".register-btn");
 const login = document.querySelector(".elogin");
 const sOut = document.querySelector(".sign-out");
 const googleLogin = document.querySelector(".glogin");
+const googleSignUp = document.querySelector(".google-reg");
 
 const loginUserNameValue = document.querySelector(".email");
 const loginPasswordValue = document.querySelector(".password");
@@ -188,10 +166,11 @@ const resetPassword = () => {
 		});
 };
 
-register.addEventListener("click", registerUser);
+// register.addEventListener("click", registerUser);
 login.addEventListener("click", loginUser);
 forgotPassword.addEventListener("click", resetPassword);
 googleLogin.addEventListener("click", loginByGoogle);
+googleSignUp.addEventListener("click", loginByGoogle);
 updateUserData();
 
-sOut.addEventListener("click", signOutUser);
+// sOut.addEventListener("click", signOutUser);

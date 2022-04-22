@@ -1,4 +1,9 @@
-// const navbar = document.querySelector(".navbar");
+const navbar = document.querySelector(".navbar");
+
+navbar.children[0].addEventListener("click", function () {
+	navbar.classList.toggle("--open");
+});
+
 // const mediaQuery = window.matchMedia("(max-width: 700px)");
 // if (mediaQuery.matches) {
 // 	console.log("matched!");
