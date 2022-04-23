@@ -32,7 +32,7 @@
 		<meta name="twitter:card" content="summary_large_image" />
 
 		<link rel="stylesheet" href="./styles.css" />
-		<script defer src="./Data.js"></script>
+		
 
 		<!--<script defer src="./assets/particles/particleScript.js"></script>-->
 	</head>
@@ -438,11 +438,16 @@
 	</body>
 	<script type="module">
 		// Import the functions you need from the SDKs you need
-		import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-app.js";
+
+		//import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-app.js";
+		
 		// TODO: Add SDKs for Firebase products that you want to use
 		// https://firebase.google.com/docs/web/setup#available-libraries
 
 		// Your web app's Firebase configuration
+
+		import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-app.js";
+
 		const firebaseConfig = {
 			apiKey: "AIzaSyBoPP1uJOmOl8qPxGQ8z4SK821gUAUXOls",
 			authDomain: "testing-4843e.firebaseapp.com",
@@ -458,6 +463,7 @@
 	<script src="../login/script.js"></script>
 	<script type="module" src="../login.js"></script>
 	<script type="module" src="../database.js"></script>
+	<script type="module" src="./Data.js"></script>
 	<script type="module" src="../groupReg.js"></script>
 	<script src="./app.js"></script>
 </html>
