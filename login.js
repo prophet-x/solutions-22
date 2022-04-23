@@ -9,7 +9,7 @@ import {
 	signInWithPopup,
 	signOut,
 	sendPasswordResetEmail,
-} from "https://www.gstatic.com/firebasejs/9.6.8/firebase-auth.js";
+} from "https://www.gstatic.com/firebasejs/9.6.11/firebase-auth.js";
 import {
 	getFirestore,
 	collection,
@@ -20,7 +20,7 @@ import {
 	where,
 	getDoc,
 	getDocs,
-} from "https://www.gstatic.com/firebasejs/9.6.8/firebase-firestore.js";
+} from "https://www.gstatic.com/firebasejs/9.6.11/firebase-firestore.js";
 
 const loginBtn = document.querySelector(".login-btn");
 const logoutBtn = document.querySelector(".logout-btn");
