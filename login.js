@@ -31,7 +31,7 @@ const provider = new GoogleAuthProvider();
 
 const register = document.querySelector(".register-btn");
 const login = document.querySelector(".elogin");
-const sOut = document.querySelector(".sign-out");
+// const sOut = document.querySelector(".sign-out");
 const googleLogin = document.querySelector(".glogin");
 const googleSignUp = document.querySelector(".google-reg");
 
@@ -149,7 +149,7 @@ const signOutUser = () => {
 			console.log("Sign-out successful");
 		})
 		.catch((error) => {
-			console.log("Sign-out un successful", error);
+			console.log("Sign-out un-successful", error);
 			// An error happened.
 		});
 };
@@ -174,4 +174,17 @@ googleLogin.addEventListener("click", loginByGoogle);
 googleSignUp.addEventListener("click", loginByGoogle);
 updateUserData();
 
-// sOut.addEventListener("click", signOutUser);
+logoutBtn.addEventListener("click", signOutUser);
+
+const profileIcon = document.querySelector("#nav-link-account");
+
+onAuthStateChanged(auth, (user) => {
+	if (user) {
+		profileIcon.classList.add("--logged-in");
+		profileIcon.classList.remove("show-modal");
+	} else {
+		profileIcon.classList.remove("--logged-in");
+		// User is signed out
+		// ...
+	}
+});
