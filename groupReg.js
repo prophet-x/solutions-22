@@ -6,6 +6,9 @@ const db = getFirestore();
 const leaderReg = document.querySelector('.leader-reg');
 const memberReg = document.querySelector('.member-reg');
 
+var eventId = getUrlVars()["eventID"];
+//console.log(eventId);
+
 const registerLeader = async () => {
 	// create doc with leader as first entry
 	const user = auth.currentUser;
@@ -19,7 +22,7 @@ const registerLeader = async () => {
 		]
 	});
 	// add leader in event collection
-	await setDoc(doc(db, 'events', 'matrix', 'registered-groups', docRef.id), {
+	await setDoc(doc(db, 'events', eventId, 'registered-groups', docRef.id), {
 		member: [
 			{
 				userName: user.displayName,
@@ -44,7 +47,7 @@ const registerMember = async () => {
 				ref: doc(db, 'users', user.uid)
 			})
 		});
-		await updateDoc(doc(db, 'events', 'matrix', 'registered-groups', '51ph65cB99XA1zi2DQhz'), {
+		await updateDoc(doc(db, 'events', eventId, 'registered-groups', '51ph65cB99XA1zi2DQhz'), {
 			member: arrayUnion({
 				userName: user.displayName,
 				mail: user.email,

@@ -1,45 +1,35 @@
 body {
-  background: linear-gradient(270deg, #1d104d 0%, #08031a 100%);
-}
-
-/* h2{
-  height: 0;
-  width: 0;
+    background: linear-gradient(270deg, #1d104d 0%, #08031a 100%);
+  }
   
-} */
-
-.main {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
-}
-
-main {
-  width: 70vw;
-  height: 70vh;
-  border: 3px;
-  /*  */
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
-  border: 20px solid white;
-  border-image: url(./Union.svg) stretch;
-  border-image-outset: 10px;
-  border-image-slice: 45 45 30 45 fill;
-  border-color: white;
-  border-radius: 5px;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-direction: row;
-  flex-wrap: wrap;
-  position: absolute;
-  top: 15%;
-  right: 15%;
-  bottom: 12%;
-
-}
-
-/* .cards {
+  .main {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+  main {
+    width: 70vw;
+    height: 80vh;
+    border: 3px;
+    background: black;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+    border: 5px solid;
+    border-color: white;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 30%;
+  
+    right: 17%;
+    bottom: 10%;
+  }
+  
+  /* .cards {
     height: 106px;
     width: 364px;
     background: linear-gradient(
@@ -58,260 +48,77 @@ main {
     #3e386c 0.31%,
     rgba(91, 86, 130, 0) 99.69%
   );
-   border: 20px solid white;
-    border-image: url(./Union.svg) stretch;
-    border-image-outset: 10px;
-    border-image-slice: 45 0 30 45 fill;
+  border: 5px solid white;
   margin: 20px 20px;
 } */
-.cotenet1 {
-  /* padding: 0; */
-  height: 3rem;
-  width: 15rem;
-  /* background: linear-gradient(
+.cotenet {
+  height: 10vh;
+  width: 15vw;
+  background: linear-gradient(
     359.64deg,
     #3e386c 0.31%,
     rgba(91, 86, 130, 0) 99.69%
-  ); */
+  );
   justify-content: space-evenly;
-  border: 20px solid white;
-  border-image: url(./Unionsmallbox.svg) stretch;
-  border-image-outset: 10px;
-  border-image-slice: 45 0 30 45 fill;
+  border: 2px solid white;
   margin: 20px 20px;
 }
-
-.cotenet2 {
-  /* padding: 0; */
-  height: 3rem;
-  width: 15rem;
-  /* background: linear-gradient(
-    359.64deg,
-    #3e386c 0.31%,
-    rgba(91, 86, 130, 0) 99.69%
-  ); */
-  justify-content: space-evenly;
-  border: 20px solid white;
-  border-image: url(./Unionyellow.svg) stretch;
-  border-image-outset: 10px;
-  border-image-slice: 45 0 30 45 fill;
-  margin: 20px 20px;
-}
-
-.cotenet3 {
-  /* padding: 0; */
-  height: 3rem;
-  width: 15rem;
-  /* background: linear-gradient(
-    359.64deg,
-    #3e386c 0.31%,
-    rgba(91, 86, 130, 0) 99.69%
-  ); */
-  justify-content: space-evenly;
-  border: 20px solid white;
-  border-image: url(./Unionred.svg) stretch;
-  border-image-outset: 10px;
-  border-image-slice: 45 0 30 45 fill;
-  margin: 20px 20px;
-
-}
-
 .date {
-  padding: 0px;
-  height: 0.1rem;
-  width: 4rem;
-  border: 20px solid white;
-  border-image: url(./unionsmallest.svg) stretch;
-  border-image-outset: 10px;
-  border-image-slice: 30 45 20 45;
+  padding: 20px;
+
+  height: 4vh;
+  width: 4vw
+  ;
+  background: linear-gradient(
+    359.64deg,
+    #3e386c 0.31%,
+    rgba(91, 86, 130, 0) 99.69%
+  );
+  justify-content: space-around;
+  border: 2px solid white;
+  margin: 20px 20px;
   font-size: auto;
   color: white;
   text-align: justify;
-  position: relative;
-  top: -15px;
-  right: -1.6rem;
-  font-family: tomosemibold;
-  font-size: 0.71em;
 }
-
 .line {
-  height: 21rem;
+  height: 375px;
   width: 2px;
-  border-radius: 2px;
   background: linear-gradient(359.64deg, #35258d, #2069bf);
 }
-
-@font-face {
-  src: url(fonts/Tomorrow-SemiBold.ttf);
-  font-family: tomosemibold;
-
-}
-
 h1 {
   padding: 0px;
-  font-size: 1.3em;
+  font-size: 20px;
   color: white;
-  font-family: tomosemibold;
-  margin-top: -20px;
-  margin-left: -16px;
-
 }
-
-@font-face {
-  font-family: tomoregular;
-  src: url(fonts/Tomorrow-Regular.ttf);
-  @font-face {
-    font-family: tomobold;
-    src: url(fonts/Tomorrow-Medium.ttf);
-  }
-}
-
 h4 {
-  padding: 0px;
-  font-size: .9em;
+  font-size: 18px;
   color: white;
   font-weight: lighter;
-  font-family: tomoregular;
-  margin-top: -5px;
-  margin-left: -16px;
 }
-
-@media screen and (max-width: 720px) {
-  
-  h2{
- 
-    height: 10px;
-    width: 10px;
-    color: white;
-    margin-left: 33vw;
-    margin-top: 50px;
-    font-size: xx-large;
-    font-family: tomosemibold;
- 
-  }
- 
+@media screen and (max-width: 480px) {
   .cards {
-   
     height: auto;
     width: auto;
-   
-    border: 20px solid white;
-    border-image: url(./Unionandriod.svg) stretch;
-    border-image-outset: 10px;
-    border-image-slice: 45 45 45 45 fill;
+    background: black;
+    border: 5px solid white;
     margin: 20px 20px;
   }
-
-  main {
+  main{
     width: 70vw;
     height: auto;
     display: flexbox;
     align-content: flex-start;
     background: none;
     border: none;
-    box-shadow: none;
   }
 
-  .line {
+  .line{
     height: 0;
     width: 0;
   }
-
-  .cotenet {
+  .cotenet{
     width: 60vw;
     height: 10vh;
   }
-  .date{
-    position: relative;
-    right: -32%;
-    top: 2px;
-    height: 0.7rem;
-  width: 4rem;
-  }
-}
-@media screen and (max-width: 1376px) and (min-width: 720px) {
-  
-  .line{
-    height: 0;
-    width: 0;
-
-  }
-  main {
-    width: 70vw;
-    height: 143vh;
-    border: 3px;
-    /*  */
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
-    border: 20px solid white;
-    border-image: url(./Union.svg) stretch;
-    border-image-outset: 10px;
-    border-image-slice: 45 45 45 60 fill;
-    border-color: white;
-    border-radius: 5px;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-    position: absolute;
-    top: 15%;
-    right: 15%;
-    bottom: 12%;
-  }
-  .date{
-    position: relative;
-    right: -25%;
-    top: 2px;
-    height: 0.7rem;
-  width: 4rem;
-  margin-bottom: 30px;
-}
-.cards{
-  margin-left: 60px;
-}
-/* h2{
-  color: white;
-  position: absolute;
-  right: 60%;
-  font-family: tomosemibold;
-  font-size: xx-large;
-} */
-}
- 
-@media screen AND (max-width:1086px) and (min-width:721px) {
-  .line{
-    height: 0;
-    width: 0;
-
-  }
-  main {
-    width: 70vw;
-    height:160vh;
-    border: 3px;
-    /*  */
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
-    border: 20px solid white;
-    border-image: url(./Union.svg) stretch;
-    border-image-outset: 10px;
-    border-image-slice: 45 45 45 60 fill;
-    border-color: white;
-    border-radius: 5px;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-    position: absolute;
-    top: 15%;
-    right: 15%;
-    bottom: 12%;
-  }
-  .date{
-    position: relative;
-    right: -25%;
-    top: 2px;
-    height: 0.7rem;
-  width: 4rem;
-  margin-bottom: 30px;
-}
 }

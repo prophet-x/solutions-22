@@ -1,0 +1,276 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(270deg, #1d104d 0%, #08031a 100%);
+}
+
+.show-modal {
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 1.75rem 3.5rem;
+  margin: 5rem 2rem;
+  border: none;
+  background-color: #fff;
+  color: #444;
+  border-radius: 10rem;
+  cursor: pointer;
+}
+
+.close-modal {
+  position: absolute;
+  top: 1.2rem;
+  right: 2rem;
+  font-size: 5rem;
+  color: #333;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+/* -------------------------- */
+/* CLASSES TO MAKE MODAL WORK */
+.hidden {
+  display: none;
+}
+
+.modal {
+  border-style: solid;
+  border-color: transparent;
+  border-width: 15px 15px 20px 15px;
+  border-image: url("./asset/border.svg") 0% 30 50 30 fill / 1 / 0 stretch;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* width: 38%; */
+
+  /* background-color: black; */
+  /* padding: 6rem; */
+  border-radius: 5px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 5;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+  /* width: 100%; */
+}
+
+.tablinks {
+  background-color: black;
+  color: white;
+  font-family: "Tomorrow";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  top: -36px;
+  position: relative;
+  margin: 0;
+  padding: 10px 15px;
+  border: 3px solid #34248b;
+  left: -5px;
+}
+
+input {
+  font-family: "Tomorrow";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  background-color: black;
+  border-style: none;
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+input:focus {
+  outline: none;
+}
+.loginbox {
+  /* background: black;
+   */
+  /* background-color: black; */
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  padding: 25px;
+  color: white;
+  /* width: 50%; */
+}
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+::placeholder {
+  color: #524e5e;
+}
+.fg {
+  display: table-cell;
+  vertical-align: bottom;
+}
+.log {
+  display: flex;
+  justify-content: space-between;
+}
+.log label {
+  font-family: "Tomorrow";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 22px;
+}
+
+.login {
+  background-color: black;
+  color: white;
+  font-family: "Tomorrow";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  border-style: none;
+  border: solid transparent;
+  border-width: 10px 10px 20px 12px;
+  border-image: url(./asset/loginb1.svg) stretch;
+  border-image-slice: 40% 25 24 30 fill;
+}
+.brd1 {
+  border: solid transparent;
+  border-width: 14px 0px 10px 12px;
+  border-image: url(./asset/brd1.svg) stretch;
+  border-image-slice: 40% 0 20 30 fill;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+.brd2 {
+  border: solid transparent;
+  border-width: 14px 0px 10px 12px;
+  border-image: url(./asset/brd2.svg) stretch;
+  border-image-slice: 40% 0 20 30 fill;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+.logbut2 {
+  display: flex;
+  justify-content: center;
+}
+/*-----------------------------------------*/
+.signupbox {
+  display: none;
+}
+
+.signupinputs {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.signupinputs1 {
+  display: flex;
+  justify-content: space-around;
+}
+.signupinputs2 {
+  display: flex;
+  justify-content: space-around;
+}
+.signupbut {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.sub {
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.signupbut1 {
+  background-color: black;
+  color: white;
+  font-family: "Tomorrow";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  border-style: none;
+  border: solid transparent;
+  border-width: 10px 10px 20px 12px;
+  border-image: url(./asset/loginb1.svg) stretch;
+  border-image-slice: 40% 25 24 30 fill;
+}
+
+.tabcontent {
+  /* display: none; */
+}
+@media only screen and (max-width: 700px) {
+  .loginbox {
+    width: 100%;
+  }
+  .log {
+    width: 100%;
+    display: flex;
+    justify-items: center;
+    flex-direction: column;
+  }
+  .login {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  .fg {
+    text-align: center;
+  }
+  .signupinputs1 {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .signupinputs2 {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .dn {
+    margin-top: 20px;
+    border: solid transparent;
+    border-width: 14px 0px 10px 12px;
+    border-image: url(./asset/brd2.svg) stretch;
+    border-image-slice: 40% 0 20 30 fill;
+  }
+  .up {
+    margin-bottom: 20px;
+    border: solid transparent;
+    border-width: 14px 0px 10px 12px;
+    border-image: url(./asset/brd1.svg) stretch;
+    border-image-slice: 40% 0 20 30 fill;
+  }
+}
