@@ -1,315 +1,287 @@
-@import url('https://fonts.googleapis.com/css2?family=Tomorrow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Tomorrow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-*{
-    margin: 0;
-    box-sizing: border-box;
-    color: white;
+* {
+	margin: 0;
+	box-sizing: border-box;
+	color: white;
 }
-body{
- 
-   min-height: 100vh;
+body {
+	min-height: 100vh;
 
-    background: linear-gradient(270deg, #1D104D 0%, #08031A 100%);
-    background-repeat: no repeat;
-    display: flex;
-    justify-content: center;
-    align-items: center;
- 
+	background: linear-gradient(270deg, #1d104d 0%, #08031a 100%);
+	background-repeat: no repeat;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
-.Profile_page{
-   width: 90%;
+.Profile_page {
+	width: 90%;
 
-   
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
- 
-    padding: 2rem;
- 
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+
+	padding: 2rem;
 }
 
-.profile_details{
-    
+.profile_details {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 32.75rem;
 
-   
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height:32.75rem;
-    
-    
-    /* margin:2rem;
+	/* margin:2rem;
     padding: 2rem; */
-    align-items: center;
-    border: 20px solid white;
-    /* add the border from figma export */
-    border-image: url(./rightBorder.svg) stretch;
-    
-    /* pushes the image outside the border defined by 10px */
-  border-image-outset: 25px 18px 18px 18px;
-    /* slices the image from all 4 sides, you can simply write 30 in place of these values depending upon the type of border-image used */
-    border-image-slice: 40 0 30 45 fill;
-    
-    
+	align-items: center;
+	border: 20px solid white;
+	/* add the border from figma export */
+	border-image: url(./rightBorder.svg) stretch;
+
+	/* pushes the image outside the border defined by 10px */
+	border-image-outset: 25px 18px 18px 18px;
+	/* slices the image from all 4 sides, you can simply write 30 in place of these values depending upon the type of border-image used */
+	border-image-slice: 40 0 30 45 fill;
 }
 
-.left-content{
-    
-
-    
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
+.left-content {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
-.profile_pic{
-    display: flex;
-
-
+.profile_pic {
+	display: flex;
 }
 
-.user_name{
-    font-family: 'Tomorrow';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 43px;
-    margin: 2rem;
+.user_name {
+	font-family: "Tomorrow";
+	font-style: normal;
+	font-weight: 600;
+	font-size: 24px;
+	line-height: 43px;
+	margin: 2rem;
 }
 
-p{
-    font-family: 'Tomorrow';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 29px;
-    display: flex;
-    text-align: center;
-    margin: 0 !important;
-    padding: 0;
+p {
+	font-family: "Tomorrow";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 29px;
+	display: flex;
+	text-align: center;
+	margin: 0 !important;
+	padding: 0;
 }
 
+.Logout {
+	margin-top: 2rem;
 
+	/* margin: 4rem; */
+	border: 10px solid;
+	/* add the border from figma export */
+	border-image: url(./logout.svg) stretch;
+	/* pushes the image outside the border defined by 10px */
+	border-image-outset: 10px;
+	/* slices the image from all 4 sides, you can simply write 30 in place of these values depending upon the type of border-image used */
+	border-image-slice: 10 10 10 10 fill;
 
-.Logout{
-    margin-top: 2rem;
-    
-   
-    /* margin: 4rem; */
-    border: 10px solid ;
-    /* add the border from figma export */
-    border-image: url(./logout.svg) stretch;
-    /* pushes the image outside the border defined by 10px */
-    border-image-outset: 10px;
-    /* slices the image from all 4 sides, you can simply write 30 in place of these values depending upon the type of border-image used */
-    border-image-slice: 10 10 10 10 fill;
-
-    color: black;
-    font-family:'tomorrow' ;
-    font-size: 1.2rem;
-    font-weight: 500;
-    padding: 0;
-    /* margin-top: 10px; */
+	color: black;
+	font-family: "tomorrow";
+	font-size: 1.2rem;
+	font-weight: 500;
+	padding: 0;
+	/* margin-top: 10px; */
 }
 
-.registration_details{
-    height: 100%;
-   
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 32.5rem;
-    width:50rem;
-    margin:2rem;
-    margin-left: 4rem;
-    
-    /* padding: 2rem ; */
-    border-right:10px;
-    border: 20px solid white;
-    /* add the border from figma export */
-    border-image: url(./leftBorder.svg) stretch;
-    /* pushes the image outside the border defined by 10px */
-    border-image-outset: 2rem;
-    /* slices the image from all 4 sides, you can simply write 30 in place of these values depending upon the type of border-image used */
-    border-image-slice: 45 0 30 45 fill;
+.registration_details {
+	height: 100%;
 
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: auto;
+	width: 50rem;
+	margin: 2rem;
+	margin-left: 4rem;
+
+	/* padding: 2rem ; */
+	border-right: 10px;
+	border: 20px solid white;
+	/* add the border from figma export */
+	border-image: url(./leftBorder.svg) stretch;
+	/* pushes the image outside the border defined by 10px */
+	border-image-outset: 2rem;
+	/* slices the image from all 4 sides, you can simply write 30 in place of these values depending upon the type of border-image used */
+	border-image-slice: 45 0 30 45 fill;
 }
 
-.title{
-    /* position: absolute;
+.title {
+	/* position: absolute;
     margin: -2rem 8.5rem ; */
-    font-family: 'Tomorrow';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 2.5rem;
-    line-height: 43px;
-    color: #C8C7FF;
-   
-    width: 100%;
-    text-align: center;
-}
+	font-family: "Tomorrow";
+	font-style: normal;
+	font-weight: 600;
+	font-size: 2.5rem;
+	line-height: 43px;
+	color: #c8c7ff;
 
-
-h2{
-    margin:0;
-}
-
-.heading1 {
-    display: flex;
-    flex-direction: row;
-    margin: 0px 80px 0px 149px;
-    font-family: 'Tomorrow';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 15px;
-    color: rgba(6, 189, 252, 1);
-}
-
-h4 {
-    margin: 0;
-}
-
-.heading2 {
-    display: flex;
-    flex-direction: row;
-    margin: 0px 80px 0px 80px;
-    font-family: 'Tomorrow';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 15px;
-    color: rgba(6, 189, 252, 1);
-    ;
-}
-
-.heading3 {
-    display: flex;
-    flex-direction: row;
-    margin: 0px 80px 0px 80px;
-    font-family: 'Tomorrow';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 15px;
-    color: rgba(6, 189, 252, 1);
-}
-
-.group_event {
-    font-family: 'Tomorrow';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 29px;
-    text-align: center;
-    color: rgba(200, 199, 255, 1);
-}
-
-.details {
-    margin: 0;
-    color: rgba(200, 199, 255, 1);
+	width: 100%;
+	text-align: center;
 }
 
 h2 {
-    margin: 0 125px;
-    font-size: 20px;
+	margin: 0;
+}
+
+.heading1 {
+	display: flex;
+	flex-direction: row;
+	margin: 0px 80px 0px 149px;
+	font-family: "Tomorrow";
+	font-style: normal;
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 15px;
+	color: rgba(6, 189, 252, 1);
+}
+
+h4 {
+	margin: 0;
+}
+
+.heading2 {
+	display: flex;
+	flex-direction: row;
+	margin: 0px 80px 0px 80px;
+	font-family: "Tomorrow";
+	font-style: normal;
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 15px;
+	color: rgba(6, 189, 252, 1);
+}
+
+.heading3 {
+	display: flex;
+	flex-direction: row;
+	margin: 0px 80px 0px 80px;
+	font-family: "Tomorrow";
+	font-style: normal;
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 15px;
+	color: rgba(6, 189, 252, 1);
+}
+
+.group_event {
+	font-family: "Tomorrow";
+	font-style: normal;
+	font-weight: 600;
+	font-size: 24px;
+	line-height: 29px;
+	text-align: center;
+	color: rgba(200, 199, 255, 1);
+}
+
+.details {
+	margin: 0;
+	color: rgba(200, 199, 255, 1);
+}
+
+h2 {
+	margin: 0 125px;
+	font-size: 20px;
 }
 
 hr {
-    flex-direction: column;
-    width: 70%;
-    border: 2px solid #FAFAFD;
-    
+	flex-direction: column;
+	width: 70%;
+	border: 2px solid #fafafd;
 }
 
-.registration_details table{
-    border: none !important;
-    outline: none !important;
+.registration_details table {
+	border: none !important;
+	outline: none !important;
 }
-.registration_details table tbody{
-    outline: none !important;
-    /* border-collapse: collapse !important; */
+.registration_details table tbody {
+	outline: none !important;
+	/* border-collapse: collapse !important; */
 }
-.registration_details table tbody tr{
-    border: 1px solid white !important;
-    outline:thin solid;
+.registration_details table tbody tr {
+	border: 1px solid white !important;
+	outline: thin solid;
 }
 
-.table__container{
-    margin:2rem 0;
-    width: 90%;
-    padding: 10px 0;
- 
-    display: flex;
-    flex-direction: column;
+.table__container {
+	margin: 2rem 0;
+	width: 90%;
+	padding: 10px 0;
+
+	display: flex;
+	flex-direction: column;
 }
-.table__thead{
-    display: flex;
-    justify-content: space-around;
-    border-bottom: 2px solid white;
-    padding-bottom: 10px;
+.table__thead {
+	display: flex;
+	justify-content: space-around;
+	border-bottom: 2px solid white;
+	padding-bottom: 10px;
 }
-.table__thead-cell{
-    font-weight: 600;
-    font-size: 1.3rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #06BDFC;
+.table__thead-cell {
+	font-weight: 600;
+	font-size: 1.3rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #06bdfc;
 }
-.table__tbody{
-    display: flex;
-    flex-direction: column;
+.table__tbody {
+	display: flex;
+	flex-direction: column;
 }
-.table__tbody-row{
-    position: relative;
-    height: 40px;
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-around;
-   
-    border-bottom: 1px solid gray;
-    padding-bottom: 4px;
+.table__tbody-row {
+	position: relative;
+	height: 40px;
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-around;
+
+	border-bottom: 1px solid gray;
+	padding-bottom: 4px;
 }
 .table__tbody-cell {
-    font-size: 1.1rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+	font-size: 1.1rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
-.table__tbody-row-index{
-    font-size: 1.2rem;
-    position: absolute;
-    left: 0;
-    color: #C8C7FF;
-    font-size: 1.3rem;
-    font-weight: 600;
-    font-family: 'tomorrow';
-
+.table__tbody-row-index {
+	font-size: 1.2rem;
+	position: absolute;
+	left: 0;
+	color: #c8c7ff;
+	font-size: 1.3rem;
+	font-weight: 600;
+	font-family: "tomorrow";
 }
-.title-sub{
-  
-    
-    font-size: 1.5rem;
-    font-family: 'Tomorrow';
-font-style: normal;
-font-weight: 600;
+.title-sub {
+	font-size: 1.5rem;
+	font-family: "Tomorrow";
+	font-style: normal;
+	font-weight: 600;
 
-display: flex;
-align-items: center;
-text-align: center;
-color: #C8C7FF;
-
-
+	display: flex;
+	align-items: center;
+	text-align: center;
+	color: #c8c7ff;
 }
 
-@media (max-width:992px){
-    .registration_details{
-        margin-top: 5rem !important;
-    }
+@media (max-width: 992px) {
+	.registration_details {
+		margin-top: 5rem !important;
+	}
 }
