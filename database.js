@@ -1,5 +1,5 @@
-import { getFirestore, collection, doc, addDoc, setDoc, query, where, getDoc, getDocs } from 'https://www.gstatic.com/firebasejs/9.6.8/firebase-firestore.js';
-import { getAuth } from 'https://www.gstatic.com/firebasejs/9.6.8/firebase-auth.js'
+import { getFirestore, collection, doc, addDoc, setDoc, query, where, getDoc, getDocs } from 'https://www.gstatic.com/firebasejs/9.6.11/firebase-firestore.js';
+import { getAuth } from 'https://www.gstatic.com/firebasejs/9.6.11/firebase-auth.js'
 const db = getFirestore();
 const auth = getAuth();
 

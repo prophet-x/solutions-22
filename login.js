@@ -52,7 +52,8 @@ form.onsubmit = function (e) {
 
 const writeUserData = async (user) => {
 	console.log(user);
-	await setDoc(doc(db, "users", user.uid), {
+	const docRef = doc(db, "users", user.uid);
+	await setDoc(docRef, {
 		userName: user.displayName,
 		college: "",
 		mail: user.email,
