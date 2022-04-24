@@ -2,7 +2,7 @@
 import {
 	getAuth,
 	onAuthStateChanged,
-} from "https://www.gstatic.com/firebasejs/9.6.8/firebase-auth.js";
+} from "https://www.gstatic.com/firebasejs/9.6.11/firebase-auth.js";
 
 const loginBtn = document.querySelector("#nav-link-account");
 
