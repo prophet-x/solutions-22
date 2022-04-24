@@ -16,11 +16,29 @@ const auth = getAuth();
 
 const eventReg = document.querySelector(".event-reg");
 
+function getUrlVars() {
+	var vars = {};
+	var parts = window.location.href.replace(
+		/[?&]+([^=&]+)=([^&]*)/gi,
+		function (m, key, value) {
+			vars[key] = value;
+		}
+	);
+	return vars;
+}
+
 const registerForEvent = async () => {
 	const user = auth.currentUser;
+
 	const eventName = getUrlVars()["eventID"];
 
 	// update user collection with event data
+	if (!user) {
+		document.getElementById("modal").classList.toggle("hidden");
+		document.getElementById("overlay").classList.toggle("hidden");
+		document.querySelector("body").classList.toggle("--lock-body");
+	}
+
 	if (user.emailVerified) {
 		await setDoc(doc(db, "users", user.uid, eventName, user.uid), {
 			eventID: eventName,

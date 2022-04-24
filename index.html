@@ -32,7 +32,6 @@
 		<meta name="twitter:card" content="summary_large_image" />
 
 		<link rel="stylesheet" href="./styles.css" />
-		<script defer src="./index.js"></script>
 
 		<link rel="icon" href="./assets/site-logo.png" />
 
@@ -335,12 +334,12 @@
 					</div>
 				</div>
 			</section>
-			<!-- <section id="sponsors">
+			<section id="sponsors">
 				<h1>Sponsors</h1>
 				<div class="coming-soon">
 					<a href="/sponsor/index.html">Want to sponsor Us?</a>
 				</div>
-			</section> -->
+			</section>
 			<section id="statistics">
 				<h1>Statistics</h1>
 				<div class="coming-soon">Coming Soon!</div>
@@ -445,7 +444,7 @@
 			storageBucket: "solutions-8b4a2.appspot.com",
 			messagingSenderId: "835651484832",
 			appId: "1:835651484832:web:e4b3b1adbd307085da9dc5",
-			measurementId: "G-E1EBSGELHZ"
+			measurementId: "G-E1EBSGELHZ",
 		};
 
 		// Initialize Firebase
@@ -453,7 +452,7 @@
 		const app = initializeApp(firebaseConfig);
 	</script>
 	<script src="./index.js"></script>
-	<script src="./login/script.js"></script>
+	<script type="module" src="./script.js"></script>
 	<script type="module" src="./login.js"></script>
 	<script type="module" src="./database.js"></script>
 	<script type="module" src="./groupReg.js"></script>

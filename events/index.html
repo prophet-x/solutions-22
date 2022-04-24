@@ -33,9 +33,40 @@
 
 		<link rel="stylesheet" href="./styles.css" />
 		<link rel="stylesheet" href="../styles.css" />
-		<script defer src="../index.js"></script>
 
 		<link rel="icon" href="../assets/site-logo.png" />
+
+		<script>
+			function openSection(evt, cityName) {
+				// Declare all variables
+				var i, tabcontent, tablinks;
+
+				// Get all elements with class="tabcontent" and hide them
+				tabcontent = document.getElementsByClassName("tabcontent");
+				for (i = 0; i < tabcontent.length; i++) {
+					tabcontent[i].style.display = "none";
+				}
+
+				// Get all elements with class="tablinks" and remove the class "active"
+				tablinks = document.getElementsByClassName("tablinks");
+				for (i = 0; i < tablinks.length; i++) {
+					tablinks[i].className = tablinks[i].className.replace(
+						" active",
+						""
+					);
+				}
+
+				// Show the current tab, and add an "active" class to the button that opened the tab
+				document.getElementById(cityName).style.display = "block";
+				evt.currentTarget.className += " active";
+			}
+			function eventRedirect(e) {
+				window.open(
+					"../eventRegestration/index.html?eventID=" + e.id,
+					"_blank"
+				);
+			}
+		</script>
 
 		<!--<script defer src="./assets/particles/particleScript.js"></script>-->
 	</head>
@@ -171,7 +202,7 @@
 								<img src="./assets/login_dash.svg" />
 							</div>
 							<div class="sub">
-								<button class="signupbut1">
+								<button class="signupbut1 google-reg">
 									<svg
 										style="
 											margin-right: 10px;
@@ -567,7 +598,6 @@
 			</div>
 		</footer>
 	</body>
-	<script src="./app.js"></script>
 	<script type="module">
 		// Import the functions you need from the SDKs you need
 		import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-app.js";
@@ -576,21 +606,23 @@
 
 		// Your web app's Firebase configuration
 		const firebaseConfig = {
-			apiKey: "AIzaSyBoPP1uJOmOl8qPxGQ8z4SK821gUAUXOls",
-			authDomain: "testing-4843e.firebaseapp.com",
-			projectId: "testing-4843e",
-			storageBucket: "testing-4843e.appspot.com",
-			messagingSenderId: "639151628755",
-			appId: "1:639151628755:web:4e26ff5ffa2affcfbccf26",
+			apiKey: "AIzaSyCFk9b67iowEd-gjOtGFkYRGaRqYNpENEo",
+			authDomain: "solutions-8b4a2.firebaseapp.com",
+			projectId: "solutions-8b4a2",
+			storageBucket: "solutions-8b4a2.appspot.com",
+			messagingSenderId: "835651484832",
+			appId: "1:835651484832:web:e4b3b1adbd307085da9dc5",
+			measurementId: "G-E1EBSGELHZ",
 		};
 
 		// Initialize Firebase
 		const app = initializeApp(firebaseConfig);
 	</script>
-	<script src="../login/script.js"></script>
-	<script src="./app.js"></script>
+	<script src="./event.js"></script>
+	<!-- <script src="../index.js"></script> -->
 	<script type="module" src="../login.js"></script>
 	<script type="module" src="../database.js"></script>
 	<script type="module" src="../groupReg.js"></script>
-	<script type="module" src="./script.js"></script>
+	<script type="module" src="../script.js"></script>
+	<script type="module" src="../app.js"></script>
 </html>
