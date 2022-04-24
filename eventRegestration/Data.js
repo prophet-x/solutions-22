@@ -58,14 +58,14 @@ var eventArray = [
     }
     var eventId = getUrlVars()["eventID"];
 
-    const docRef = doc(db, "events", "codered");
+    const docRef = doc(db, "events", "codeRed");
 const docSnap = await getDoc(docRef);
 
 if (docSnap.exists()) {
   console.log("Document data:", docSnap.data());
   const data = docSnap.data();
   document.getElementById('title').innerHTML = data.Title;
-  document.getElementById('title').innerHTML = data.Title;
+  //document.getElementById('title').innerHTML = data.Title;
   document.getElementById('date').innerHTML = data.date;
   document.getElementById('time').innerHTML = data.time;
   document.getElementById('teamsize').innerHTML = data.date;
