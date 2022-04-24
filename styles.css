@@ -833,7 +833,9 @@ form {
 .smart-glass
 {
 z-index: 999;
-	position: absolute;
+
+
+
 }
 
 	
@@ -882,6 +884,7 @@ h1 {
   width: 80px;
   height: 80px;
   border-radius: 100%;
+
   overflow: hidden;
   position: absolute;
   top: 0;
@@ -890,7 +893,7 @@ h1 {
   bottom: 0;
   margin: auto;
 }
-.xbox:after, .xbox:before {
+/* .xbox:after, .xbox:before {
   content: "";
   display: block;
   border-top: 10px solid #222;
@@ -905,7 +908,7 @@ h1 {
 .xbox:before {
   left: -30%;
   transform: rotate(45deg);
-}
+} */
 
 .loading-text {
   text-transform: uppercase;
@@ -923,5 +926,19 @@ h1 {
     transform: rotate(-360deg);
   }
 }
+
+.loader_wrap{
+	z-index: 999;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: #08031a;
+	display: flex;
+	align-items: center;
+	align-content: center;
+}
+
 
 

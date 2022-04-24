@@ -429,6 +429,7 @@
 				</section>
 			</div>
 		</footer>
+	<div class="loader_wrap">
 		<div class="smart-glass">
 			<h1>SOLUTIONS'22</h1>
 			<div class="logo">
@@ -439,13 +440,16 @@
 					</div>
 			</div>
 			<div class="hold-x">
-				<div class="xbox"></div>
+				<div class="xbox">
+					<div class="sol"><img src="Black.png" alt="S'22"></div>
+				</div>
 			 </div>
 			</div>
 			<div class="loading-text">
-				Loading...
+				LOADING...
 			</div>
-		</div>
+	    </div>
+	</div>
 	</body>
 	<script type="module">
 		// Import the functions you need from the SDKs you need
@@ -467,10 +471,17 @@
 		console.log("firebase auth");
 		const app = initializeApp(firebaseConfig);
 	</script>
+	<!-- loader -->
 	<script src="./index.js"></script>
 	<script src="./login/script.js"></script>
 	<script type="module" src="./login.js"></script>
 	<script type="module" src="./database.js"></script>
 	<script type="module" src="./groupReg.js"></script>
 	<script type="module" src="./app.js"></script>
-</html>
+	<script>
+		$(window).on("load",function(){
+			$(".loader_wrap").fadeOut(slow);
+
+		});
+	</script>
+	</html>
