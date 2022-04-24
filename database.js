@@ -10,6 +10,7 @@ import {
 	getDocs,
 } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-firestore.js";
 import { getAuth } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-auth.js";
+
 const db = getFirestore();
 const auth = getAuth();
 
