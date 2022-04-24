@@ -1,88 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Solutions 22</title>
 
-		<meta property="og:title" content="Solutions 22" />
-		<meta property="og:type" content="website" />
-		<meta property="og:url" content="__website-url__" />
-		<meta
-			property="og:description"
-			content="Technical Board. Army Institute of Technology, Pune."
-		/>
-		<meta
-			property="og:image"
-			content="__https://absolute/path/to/image.png__"
-		/>
-		<meta property="og:image:width" content="__dimensions-x__" />
-		<meta property="og:image:height" content="__dimensions-y__" />
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Solutions 22</title>
 
-		<meta name="twitter:title" content="Solutions 22" />
-		<meta
-			name="twitter:description"
-			content=" Technical Board. Army Institute of Technology, Pune."
-		/>
-		<meta
-			name="twitter:image"
-			content="__https://absolute/path/to/image.png__"
-		/>
-		<meta name="twitter:card" content="summary_large_image" />
+    <meta property="og:title" content="Solutions 22" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="__website-url__" />
+    <meta property="og:description" content="Technical Board. Army Institute of Technology, Pune." />
+    <meta property="og:image" content="__https://absolute/path/to/image.png__" />
+    <meta property="og:image:width" content="__dimensions-x__" />
+    <meta property="og:image:height" content="__dimensions-y__" />
 
-		<link rel="stylesheet" href="./styles.css" />
-		
+    <meta name="twitter:title" content="Solutions 22" />
+    <meta name="twitter:description" content=" Technical Board. Army Institute of Technology, Pune." />
+    <meta name="twitter:image" content="__https://absolute/path/to/image.png__" />
+    <meta name="twitter:card" content="summary_large_image" />
 
-		<!--<script defer src="./assets/particles/particleScript.js"></script>-->
-	</head>
-	<body>
-		<div class="modal hidden" id="modal">
-			<div class="wrapper">
-				<div class="box">
-					<div class="tab">
-						<button
-							class="tablinks"
-							style="width: 40%"
-							onclick="openSection(event, 'loginpage')"
-						>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="popup.css">
+    <script defer src="./Data.js"></script>
+
+    <!--<script defer src="./assets/particles/particleScript.js"></script>-->
+</head>
+
+<body>
+    <div class="div1">
+        <div class="modal hidden" id="modal">
+            <div class="wrapper">
+                <div class="box">
+                    <div class="tab">
+                        <button class="tablinks" style="width: 40%" onclick="openSection(event, 'loginpage')">
 							Login
 						</button>
-						<button
-							class="tablinks"
-							style="width: 40%"
-							onclick="openSection(event, 'signuppage')"
-						>
+                        <button class="tablinks" style="width: 40%" onclick="openSection(event, 'signuppage')">
 							Sign Up
 						</button>
-						<button
-							class="tablinks close-modal"
-							id="closeLoginModal"
-							style="width: 15%"
-						>
+                        <button class="tablinks close-modal" id="closeLoginModal" style="width: 15%">
 							X
 						</button>
-					</div>
-					<div id="loginpage" class="loginbox tabcontent">
-						<div class="input">
-							<div class="outer">
-								<form class="register-form">
-									<input
-										class="brd1 login-email"
-										type="email"
-										placeholder="email"
-									/><br />
-									<input
-										class="brd2 login-password"
-										type="password"
-										placeholder="Password"
-									/><br /><br />
-									<div class="log">
-										<button class="login elogin">
+                    </div>
+                    <div id="loginpage" class="loginbox tabcontent">
+                        <div class="input">
+                            <div class="outer">
+                                <form class="register-form">
+                                    <input class="brd1 login-email" type="email" placeholder="email" /><br />
+                                    <input class="brd2 login-password" type="password" placeholder="Password" /><br /><br />
+                                    <div class="log">
+                                        <button class="login elogin">
 											Log In
 										</button>
-										<label class="fg forgot-password"
-											>Forget Password?</label
+                                        <label class="fg forgot-password">Forget Password?</label
 										>
 									</div>
 									<br /><br />
@@ -238,7 +209,7 @@
 						<a
 							title="Events"
 							id="nav-link-events"
-							href="/events/index.html"
+							href="../events/index.html"
 						>
 							<span>Events</span>
 							<img
@@ -251,7 +222,7 @@
 						<a
 							title="Our Team"
 							id="nav-link-team"
-							href="/our-team/index.html"
+							href="../our-team/index.html"
 						>
 							<span>Our Team</span>
 							<img
@@ -264,7 +235,7 @@
 						<a
 							title="Schedule"
 							id="nav-link-schedule"
-							href="/sponsor/index.html"
+							href="../sponsor/index.html"
 						>
 							<span>Sponsors</span>
 							<img
@@ -368,7 +339,7 @@
 							<a title="About us" href="#about-us">About us</a>
 						</li>
 						<li>
-							<a title="Our team" href="/our-team/index.html"
+							<a title="Our team" href="#"
 								>Our team</a
 							>
 						</li>
@@ -435,19 +406,32 @@
 				</section>
 			</div>
 		</footer>
+	</div>
+	<div class="container">
+        <img src="./assets/close.png" alt="" class="close">
+        <h1 class="text">
+            register
+        </h1>
+        <div class="formReg">
+            <form action="">
+                <input type="text" class="input-reg" placeholder="Enter Team-ID">
+                <input type="submit" class="btn-reg" value="submit">
+            </form>
+        </div>
+        <div class="formButtons">
+            <button class="btn-reg"> register as leader</button>
+            <button id="memberBtn" class="btn-reg"> register as member</button>
+        </div>
+    </div>
 	</body>
+	<script src="./popup.js"></script>
 	<script type="module">
 		// Import the functions you need from the SDKs you need
-
-		//import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-app.js";
-		
+		import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-app.js";
 		// TODO: Add SDKs for Firebase products that you want to use
 		// https://firebase.google.com/docs/web/setup#available-libraries
 
 		// Your web app's Firebase configuration
-
-		import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-app.js";
-
 		const firebaseConfig = {
 			apiKey: "AIzaSyBoPP1uJOmOl8qPxGQ8z4SK821gUAUXOls",
 			authDomain: "testing-4843e.firebaseapp.com",
@@ -463,7 +447,6 @@
 	<script src="../login/script.js"></script>
 	<script type="module" src="../login.js"></script>
 	<script type="module" src="../database.js"></script>
-	<script type="module" src="./Data.js"></script>
 	<script type="module" src="../groupReg.js"></script>
 	<script src="./app.js"></script>
 </html>
