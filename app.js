@@ -8,7 +8,7 @@ const loginBtn = document.querySelector("#nav-link-account");
 
 const auth = getAuth();
 onAuthStateChanged(auth, (user) => {
-	if (user) {
+	if (user.emailVerified) {
 		console.log("user");
 		loginBtn.classList.add("--logged-in");
 		loginBtn.classList.remove("show-modal");

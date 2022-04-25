@@ -75,13 +75,13 @@ const registerUser = () => {
 			const user = userCredential.user;
 			console.log("USER", user);
 			sendEmailVerification(auth.currentUser).then(() => {
-				console.log("VERIFICATION MAIL SENT");
+				alert("VERIFICATION MAIL SENT");
 			});
 		})
 		.catch((error) => {
 			const errorCode = error.code;
 			const errorMessage = error.message;
-			console.log("error message", errorMessage);
+			alert(errorMessage);
 		});
 };
 
@@ -101,10 +101,11 @@ const loginUser = () => {
 			.catch((error) => {
 				const errorCode = error.code;
 				const errorMessage = error.message;
-				console.log("ERROR", errorMessage);
+				alert(errorMessage);
 			});
 	} else {
 		console.log("get email verified");
+		alert("Verify your email");
 	}
 };
 
@@ -125,7 +126,7 @@ const loginByGoogle = () => {
 			// Handle Errors here.
 			const errorCode = error.code;
 			const errorMessage = error.message;
-			console.log(errorMessage);
+			alert(errorMessage);
 			// The email of the user's account used.
 			const email = error.email;
 			// The AuthCredential type that was used.
@@ -156,6 +157,7 @@ const signOutUser = () => {
 		})
 		.catch((error) => {
 			console.log("Sign-out un-successful", error);
+			alert(error.errorMessage);
 			// An error happened.
 		});
 };
@@ -171,6 +173,7 @@ const resetPassword = () => {
 		.catch((error) => {
 			const errorCode = error.code;
 			const errorMessage = error.message;
+			alert(errorMessage);
 			// ..
 		});
 };
