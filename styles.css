@@ -797,15 +797,19 @@ form {
 	background-image: url("./assets/posters/gameJam.png");
 }
 #rcRacing {
-	background-image: url("./assets/posters/rcRacing.jpg");
+	background-image: url("./assets/posters/rc-engine.png");
 	background-position: top;
 }
 #pickAndPlace {
-	background-image: url("./assets/posters/pickAndPlace.jpg");
+	background-image: url("./assets/posters/pick-and-place.png");
 	background-position: top;
 }
 #captureTheFlag {
 	background-image: url("./assets/posters/ISDF.png");
+}
+
+#stockSimulation {
+	background-image: url("./assets/posters/stock-veer.png");
 }
 
 .display-none {

@@ -117,11 +117,11 @@ main .right-side {
 	margin: 2rem;
 }
 .left-box {
-	border: 18px solid white;
+	border: 10px solid white;
 	font-family: revert;
 	border-image: url(./box.png) stretch;
-	border-image-outset: 5px;
-	border-image-slice: 45 0 30 45 fill;
+	border-image-outset: 2px;
+	border-image-slice: 35 fill;
 }
 
 #selectedSection {

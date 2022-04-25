@@ -161,9 +161,11 @@ const signOutUser = () => {
 };
 
 const resetPassword = () => {
+	let email = window.prompt("Enter your email: ");
 	sendPasswordResetEmail(auth, email)
 		.then(() => {
 			// Password reset email sent!
+			console.log("password reset mail sent");
 			// ..
 		})
 		.catch((error) => {
