@@ -3,7 +3,7 @@ import {
 	onAuthStateChanged,
 } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-auth.js";
 
-("use strict");
+//("use strict");
 const modal = document.querySelector(".modal");
 const overlay = document.querySelector(".overlay");
 const btnCloseModal = document.querySelector(".close-modal");
