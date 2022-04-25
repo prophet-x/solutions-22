@@ -11,8 +11,8 @@ const btnOpenModal = document.querySelectorAll(".show-modal");
 
 const auth = getAuth();
 onAuthStateChanged(auth, (user) => {
-	if (user.emailVerified) {
-		console.log("user", user);
+	if (user) {
+		console.log("user");
 		loginBtn.classList.add("--logged-in");
 		loginBtn.classList.remove("show-modal");
 		window.location = "http://127.0.0.1:5500/profile/index.html";
@@ -34,7 +34,6 @@ onAuthStateChanged(auth, (user) => {
 			document.getElementById("overlay").classList.toggle("hidden");
 			document.querySelector("body").classList.toggle("--lock-body");
 			console.log("clicked ");
-			console.log('bhai');
 			
 		});
 
