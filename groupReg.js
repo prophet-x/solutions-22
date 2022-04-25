@@ -27,6 +27,16 @@ const db = getFirestore();
 const leaderReg = document.querySelector(".leader-reg");
 const memberReg = document.querySelector(".member-reg");
 
+function getUrlVars() {
+	var vars = {};
+	var parts = window.location.href.replace(
+		/[?&]+([^=&]+)=([^&]*)/gi,
+		function (m, key, value) {
+			vars[key] = value;
+		}
+	);
+	return vars;
+}
 var eventId = getUrlVars()["eventID"];
 //console.log(eventId);
 

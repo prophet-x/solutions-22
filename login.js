@@ -29,7 +29,7 @@ const auth = getAuth();
 const db = getFirestore();
 const provider = new GoogleAuthProvider();
 
-const register = document.querySelector(".register-btn");
+const register = document.querySelector(".register");
 const login = document.querySelector(".elogin");
 // const sOut = document.querySelector(".sign-out");
 const googleLogin = document.querySelector(".glogin");
@@ -57,6 +57,12 @@ const writeUserData = async (user) => {
 		userName: user.displayName,
 		college: "",
 		mail: user.email,
+		event: [
+			{
+				nameOfEvent: "",
+				ref: doc(db, user, user.id),
+			},
+		],
 	});
 };
 
@@ -167,7 +173,7 @@ const resetPassword = () => {
 		});
 };
 
-// register.addEventListener("click", registerUser);
+register.addEventListener("click", registerUser);
 login.addEventListener("click", loginUser);
 forgotPassword.addEventListener("click", resetPassword);
 googleLogin.addEventListener("click", loginByGoogle);

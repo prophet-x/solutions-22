@@ -54,6 +54,7 @@ body {
 }
 .profile_pic {
 	display: flex;
+	width: 100px;
 }
 
 .user_name {

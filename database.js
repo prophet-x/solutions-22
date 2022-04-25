@@ -8,6 +8,8 @@ import {
 	where,
 	getDoc,
 	getDocs,
+	updateDoc,
+	arrayUnion,
 } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-firestore.js";
 import { getAuth } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-auth.js";
 
@@ -26,6 +28,8 @@ function getUrlVars() {
 	);
 	return vars;
 }
+
+const eventID = getUrlVars()["eventID"];
 
 const registerForEvent = async () => {
 	const user = auth.currentUser;
@@ -55,6 +59,12 @@ const registerForEvent = async () => {
 				ref: doc(db, "users", user.uid),
 			}
 		);
+		await updateDoc(doc(db, "users", user.uid), {
+			event: arrayUnion({
+				nameofEvent: eventID,
+				ref: collection(db, "users", user.uid, eventName),
+			}),
+		});
 	} else {
 		console.log("get email verified");
 	}
