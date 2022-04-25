@@ -112,9 +112,9 @@ p {
 
 	/* padding: 2rem ; */
 	border-right: 10px;
-	border: 20px solid white;
+	/*border: 20px solid white;
 	/* add the border from figma export */
-	border-image: url(./leftBorder.svg) stretch;
+	/*border-image: url(./leftBorder.svg) stretch;
 	/* pushes the image outside the border defined by 10px */
 	border-image-outset: 2rem;
 	/* slices the image from all 4 sides, you can simply write 30 in place of these values depending upon the type of border-image used */
@@ -284,5 +284,27 @@ hr {
 @media (max-width: 992px) {
 	.registration_details {
 		margin-top: 5rem !important;
+	}
+}
+
+/*discord*/
+#Discord-sec{
+	/* background: linear-gradient(125deg, #6536d6, #170c31); */
+    min-height: 50vh !important;
+    /* border-radius: 20px; */
+	/*margin-bottom: 80px;*/
+	margin: auto;
+}
+
+#discordImg{
+
+	margin: auto;max-width: 100%;
+	filter: drop-shadow(2px 4px 6px black);
+	border-radius: 100px;
+}
+
+@media screen and (max-width: 600px) {
+	#discordImg{
+		border-radius: 50px;
 	}
 }

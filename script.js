@@ -16,14 +16,29 @@ onAuthStateChanged(auth, (user) => {
 		loginBtn.classList.add("--logged-in");
 		loginBtn.classList.remove("show-modal");
 		window.location = "http://127.0.0.1:5500/profile/index.html";
+		document.getElementById("discordLink").addEventListener('click',function(){
+			document.getElementById("discordLink").href = 'https://discord.gg/hp5nwTsvsS';
+		});
+
 	} else {
 		console.log("not user");
+
+		document.getElementById("discordLink").addEventListener('click',function(){
+			document.getElementById('modal').classList.remove('hidden');
+			document.getElementById('overlay').classList.remove('hidden');
+			document.getElementById('body').classList.add('--lock-body');
+		});
+
 		loginBtn.addEventListener("click", function (e) {
 			document.getElementById("modal").classList.toggle("hidden");
 			document.getElementById("overlay").classList.toggle("hidden");
 			document.querySelector("body").classList.toggle("--lock-body");
 			console.log("clicked ");
+			console.log('bhai');
+			
 		});
+
+		
 
 		for (let i = 0; i < btnOpenModal.length; i++)
 			btnOpenModal[i].addEventListener("click", function () {
