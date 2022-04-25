@@ -484,13 +484,9 @@
 			} else {
 				console.log("not user");
 				loginBtn.addEventListener("click", function (e) {
-					document.getElementById("modal").classList.toggle("hidden");
-					document
-						.getElementById("overlay")
-						.classList.toggle("hidden");
-					document
-						.querySelector("body")
-						.classList.toggle("--lock-body");
+					document.getElementById("modal").classList.add("hidden");
+					document.getElementById("overlay").classList.add("hidden");
+					document.querySelector("body").classList.add("--lock-body");
 					console.log("clicked ");
 				});
 			}

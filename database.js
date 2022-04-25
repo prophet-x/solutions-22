@@ -59,12 +59,20 @@ const registerForEvent = async () => {
 				ref: doc(db, "users", user.uid),
 			}
 		);
-		await updateDoc(doc(db, "users", user.uid), {
-			event: arrayUnion({
-				nameofEvent: eventID,
-				ref: collection(db, "users", user.uid, eventName),
-			}),
-		});
+
+		switch (eventID) {
+			case "bgmi":
+				window.open("https://forms.gle/qqgHB6hPjYxiVkGt7", "_blank");
+				break;
+			case "valorant":
+				window.open("https://forms.gle/vhbxx2wT1Py1mR1B8", "_blank");
+				break;
+			case "clashRoyale":
+				window.open("https://forms.gle/GPyULSWTjrLLnxov5", "_blank");
+				break;
+			default:
+				break;
+		}
 	} else {
 		console.log("get email verified");
 	}

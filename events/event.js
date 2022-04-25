@@ -47,6 +47,7 @@ function openSection(evt, cityName) {
 const closeModal = function () {
 	modal.classList.add("hidden");
 	overlay.classList.add("hidden");
+	document.querySelector("body").classList.remove("--lock-body");
 };
 
 btnCloseModal.addEventListener("click", closeModal);

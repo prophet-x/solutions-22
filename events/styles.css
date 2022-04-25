@@ -224,7 +224,9 @@ main .right-side {
 	100% {
 	}
 }
-
+.event-btn {
+	cursor: pointer;
+}
 .event-card-border {
 	margin: 1rem auto;
 	display: flex;
