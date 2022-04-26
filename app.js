@@ -20,9 +20,9 @@ onAuthStateChanged(auth, (user) => {
 	} else {
 		console.log("not user");
 		loginBtn.addEventListener("click", function (e) {
-			document.getElementById("modal").classList.toggle("hidden");
-			document.getElementById("overlay").classList.toggle("hidden");
-			document.querySelector("body").classList.toggle("--lock-body");
+			document.getElementById("modal").classList.remove("hidden");
+			document.getElementById("overlay").classList.remove("hidden");
+			document.querySelector("body").classList.remove("--lock-body");
 			console.log("clicked ");
 		});
 	}
