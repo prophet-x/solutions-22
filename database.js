@@ -38,9 +38,9 @@ const registerForEvent = async () => {
 
 	// update user collection with event data
 	if (!user) {
-		document.getElementById("modal").classList.toggle("hidden");
-		document.getElementById("overlay").classList.toggle("hidden");
-		document.querySelector("body").classList.toggle("--lock-body");
+		document.getElementById("modal").classList.remove("hidden");
+		document.getElementById("overlay").classList.remove("hidden");
+		document.querySelector("body").classList.remove("--lock-body");
 	}
 
 	if (user.emailVerified) {
