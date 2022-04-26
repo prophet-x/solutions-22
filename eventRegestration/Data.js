@@ -68,10 +68,10 @@ if (docSnap.exists()) {
 	console.log("Document data:", docSnap.data());
 	const data = docSnap.data();
 	document.getElementById("title").innerHTML = data.title;
-	//document.getElementById('title').innerHTML = data.Title;
+	document.getElementById("event-img").src = data.img;
 	document.getElementById("date").innerHTML = data.date;
 	document.getElementById("time").innerHTML = data.time;
-	document.getElementById("teamsize").innerHTML = data.date;
+	document.getElementById("teamsize").innerHTML = data.teamsize;
 	document.getElementById("prizeWorth").innerHTML = data.prizeWorth;
 	document.getElementById("descriptionUp").innerHTML = data.descriptionUp;
 	document.getElementById("paragraph").innerHTML = data.paragraph;
