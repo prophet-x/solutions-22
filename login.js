@@ -52,12 +52,15 @@ form.onsubmit = function (e) {
 
 const writeUserData = async (user) => {
 	console.log(user);
-	const docRef = doc(db, "users", user.uid);
-	await setDoc(docRef, {
-		userName: user.displayName,
-		college: "",
-		mail: user.email,
-	});
+	try {
+		const docRef = doc(db, "users", user.uid);
+		await setDoc(docRef, {
+			userName: user.displayName,
+			mail: user.email,
+		});
+	} catch (error) {
+		console.log("user doc error", error);
+	}
 };
 const writeUserDataForRegisteration = async (
 	user,
