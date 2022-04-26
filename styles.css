@@ -831,22 +831,23 @@ form {
 	}
 }
 /*discord*/
-#Discord-sec{
+#Discord-sec {
 	/* background: linear-gradient(125deg, #6536d6, #170c31); */
-    min-height: 50vh !important;
-    /* border-radius: 20px; */
+	min-height: 50vh !important;
+	/* border-radius: 20px; */
 	margin-bottom: 80px;
+	cursor: pointer;
 }
 
-#discordImg{
-
-	margin: auto;max-width: 100%;
+#discordImg {
+	margin: auto;
+	max-width: 100%;
 	filter: drop-shadow(2px 4px 6px black);
 	border-radius: 100px;
 }
 
 @media screen and (max-width: 600px) {
-	#discordImg{
+	#discordImg {
 		border-radius: 50px;
 	}
 }

@@ -70,6 +70,9 @@ const registerForEvent = async () => {
 			case "clashRoyale":
 				window.open("https://forms.gle/GPyULSWTjrLLnxov5", "_blank");
 				break;
+			case "gameJam":
+				window.open("https://forms.gle/a4CUtkLhzUrVSJyW7", "_blank");
+				break;
 			default:
 				break;
 		}
