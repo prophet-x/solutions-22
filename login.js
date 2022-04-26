@@ -57,13 +57,21 @@ const writeUserData = async (user) => {
 		userName: user.displayName,
 		college: "",
 		mail: user.email,
-		event: [
-			{
-				nameOfEvent: "",
-				ref: doc(db, user, user.id),
-			},
-		],
 	});
+};
+const writeUserDataForRegisteration = async (
+	user,
+	userNameValue,
+	collegeValue,
+	mailValue
+) => {
+	const docRef = doc(db, "users", user.uid);
+	await setDoc(docRef, {
+		userName: userNameValue,
+		college: collegeValue,
+		mail: mailValue,
+	});
+	console.log("doc written!!!");
 };
 
 const registerUser = () => {
@@ -76,6 +84,12 @@ const registerUser = () => {
 			console.log("USER", user);
 			sendEmailVerification(auth.currentUser).then(() => {
 				alert("VERIFICATION MAIL SENT");
+				writeUserDataForRegisteration(
+					user,
+					userNameValue,
+					collegeValue,
+					emailValue.value
+				);
 			});
 		})
 		.catch((error) => {
@@ -90,13 +104,12 @@ const loginUser = () => {
 	const passwordCode = document.querySelector(".login-password");
 	console.log("values", emailValue, passwordValue);
 	const user = auth.currentUser;
-	if (user.emailVerified) {
+	console.log("user doc write", user);
+	if (user) {
 		signInWithEmailAndPassword(auth, emailValue.value, passwordCode.value)
 			.then((userCredential) => {
 				const user = userCredential.user;
 				console.log("SIGNED IN", user);
-				// grab data from registeration form and pass it as arguments for writing user data
-				writeUserData(user);
 			})
 			.catch((error) => {
 				const errorCode = error.code;

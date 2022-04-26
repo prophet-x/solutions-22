@@ -800,6 +800,7 @@ form {
 	}
 	.event-poster img {
 		height: 200px;
+		position: absolute;
 		top: 50px;
 		left: 0px;
 		margin-left: -1rem;

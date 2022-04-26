@@ -73,11 +73,10 @@ const registerForEvent = async () => {
 			default:
 				break;
 		}
+		alert_creator("Successfully Registered for the event.");
 	} else {
-		console.log("get email verified");
+		alert("VERIFY YOUR EMAIL");
 	}
-	console.log("data written");
-	alert_creator("Successfully Registered for the event.");
 };
 
 function alert_creator(msg) {
