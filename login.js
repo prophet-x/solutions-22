@@ -51,16 +51,13 @@ form.onsubmit = function (e) {
 };
 
 const writeUserData = async (user) => {
-	console.log(user);
 	try {
 		const docRef = doc(db, "users", user.uid);
 		await setDoc(docRef, {
 			userName: user.displayName,
 			mail: user.email,
 		});
-	} catch (error) {
-		console.log("user doc error", error);
-	}
+	} catch (error) {}
 };
 const writeUserDataForRegisteration = async (
 	user,
@@ -70,11 +67,10 @@ const writeUserDataForRegisteration = async (
 ) => {
 	const docRef = doc(db, "users", user.uid);
 	await setDoc(docRef, {
-		userName: userNameValue,
-		college: collegeValue,
-		mail: mailValue,
+		userName: userNameValue.value,
+		college: collegeValue.value,
+		mail: mailValue.value,
 	});
-	console.log("doc written!!!");
 };
 
 const registerUser = () => {
@@ -84,14 +80,13 @@ const registerUser = () => {
 	createUserWithEmailAndPassword(auth, emailValue, passwordCode)
 		.then((userCredential) => {
 			const user = userCredential.user;
-			console.log("USER", user);
 			sendEmailVerification(auth.currentUser).then(() => {
 				alert("VERIFICATION MAIL SENT");
 				writeUserDataForRegisteration(
 					user,
 					userNameValue,
 					collegeValue,
-					emailValue.value
+					mailValue
 				);
 			});
 		})
@@ -105,14 +100,11 @@ const registerUser = () => {
 const loginUser = () => {
 	const emailValue = document.querySelector(".login-email");
 	const passwordCode = document.querySelector(".login-password");
-	console.log("values", emailValue, passwordValue);
 	const user = auth.currentUser;
-	console.log("user doc write", user);
 	if (user) {
 		signInWithEmailAndPassword(auth, emailValue.value, passwordCode.value)
 			.then((userCredential) => {
 				const user = userCredential.user;
-				console.log("SIGNED IN", user);
 			})
 			.catch((error) => {
 				const errorCode = error.code;
@@ -120,7 +112,6 @@ const loginUser = () => {
 				alert(errorMessage);
 			});
 	} else {
-		console.log("get email verified");
 		alert("Verify your email");
 	}
 };
@@ -133,7 +124,6 @@ const loginByGoogle = () => {
 			const token = credential.accessToken;
 			// The signed-in user info.
 			const user = result.user;
-			console.log("GOOGLE SIGN IN SUCCESSFUL", user);
 			// pass required data as arguments to this function to write user data
 			writeUserData(user);
 			// ...
@@ -157,7 +147,6 @@ const updateUserData = () => {
 			// User is signed in, see docs for a list of available properties
 			// https://firebase.google.com/docs/reference/js/firebase.User
 			const uid = user.uid;
-			console.log("ON AUTH STATE CHANGE EVENT FIRED", user);
 			// ...
 		} else {
 			// User is signed out
@@ -168,11 +157,8 @@ const updateUserData = () => {
 
 const signOutUser = () => {
 	signOut(auth)
-		.then(() => {
-			console.log("Sign-out successful");
-		})
+		.then(() => {})
 		.catch((error) => {
-			console.log("Sign-out un-successful", error);
 			alert(error.errorMessage);
 			// An error happened.
 		});
@@ -183,7 +169,6 @@ const resetPassword = () => {
 	sendPasswordResetEmail(auth, email)
 		.then(() => {
 			// Password reset email sent!
-			console.log("password reset mail sent");
 			// ..
 		})
 		.catch((error) => {
