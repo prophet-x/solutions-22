@@ -15,7 +15,7 @@ onAuthStateChanged(auth, (user) => {
 		document.getElementById("modal").classList.add("hidden");
 		document.getElementById("overlay").classList.add("hidden");
 		loginBtn.addEventListener("click", function () {
-			window.location = "http://127.0.0.1:5500/profile/index.html";
+			window.location = "http://solutions22.in/index.html";
 		});
 	} else {
 		console.log("not user");
