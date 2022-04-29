@@ -7,6 +7,8 @@ import {
 	onAuthStateChanged,
 	GoogleAuthProvider,
 	signInWithPopup,
+	signInWithRedirect,
+	getRedirectResult,
 	signOut,
 	sendPasswordResetEmail,
 } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-auth.js";
@@ -49,7 +51,6 @@ const form = document.querySelector(".register-form");
 form.onsubmit = function (e) {
 	e.preventDefault();
 };
-
 const writeUserData = async (user) => {
 	try {
 		const docRef = doc(db, "users", user.uid);
@@ -59,6 +60,24 @@ const writeUserData = async (user) => {
 		});
 	} catch (error) {}
 };
+
+getRedirectResult(auth)
+	.then((result) => {
+		const user = result.user;
+		writeUserData(user);
+		console.log("data written through redirect");
+	})
+	.catch((error) => {
+		// Handle Errors here.
+		const errorCode = error.code;
+		const errorMessage = error.message;
+		// The email of the user's account used.
+		const email = error.email;
+		// The AuthCredential type that was used.
+		const credential = GoogleAuthProvider.credentialFromError(error);
+		// ...
+	});
+
 const writeUserDataForRegisteration = async (
 	user,
 	userNameValue,
@@ -117,28 +136,9 @@ const loginUser = () => {
 };
 
 const loginByGoogle = () => {
-	signInWithPopup(auth, provider)
-		.then((result) => {
-			// This gives you a Google Access Token. You can use it to access the Google API.
-			const credential = GoogleAuthProvider.credentialFromResult(result);
-			const token = credential.accessToken;
-			// The signed-in user info.
-			const user = result.user;
-			// pass required data as arguments to this function to write user data
-			writeUserData(user);
-			// ...
-		})
-		.catch((error) => {
-			// Handle Errors here.
-			const errorCode = error.code;
-			const errorMessage = error.message;
-			alert(errorMessage);
-			// The email of the user's account used.
-			const email = error.email;
-			// The AuthCredential type that was used.
-			const credential = GoogleAuthProvider.credentialFromError(error);
-			// ...
-		});
+	signInWithRedirect(auth, provider).then((result) => {
+		console.log("sign in result", result);
+	});
 };
 
 const updateUserData = () => {
