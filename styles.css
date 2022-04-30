@@ -393,6 +393,44 @@ body footer .footer-content section ul#socials-links li {
 	overflow: hidden;
 }
 
+.btn-container {
+	width: 50%;
+	display: flex;
+	flex-direction: row;
+}
+
+body main #event-redirect {
+	display: block !important;
+	width: 100%;
+}
+
+.text-content,
+.btn-container {
+	margin: 1rem auto;
+}
+
+.event-redirect-btn {
+	background: transparent;
+	border: 2px solid white;
+	font-family: "Tomorrow";
+	width: 100%;
+	height: 100%;
+	font-size: 3rem;
+	border-radius: 8px;
+	color: wheat;
+	padding: 1rem;
+}
+.event-redirect-btn:active {
+	border: none;
+	outline: none;
+}
+.event-redirect-btn:hover {
+	transform: scale(1.1);
+	transition: 0.25s all ease-in-out;
+	background: white;
+	color: black;
+}
+
 @media screen and (max-width: 1000px) {
 	body header {
 		position: fixed;
