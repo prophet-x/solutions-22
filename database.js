@@ -73,6 +73,15 @@ const registerForEvent = async () => {
 			case "gameJam":
 				window.open("https://forms.gle/a4CUtkLhzUrVSJyW7", "_blank");
 				break;
+			case "gameJam":
+				window.open("https://forms.gle/a4CUtkLhzUrVSJyW7", "_blank");
+				break;
+			case "stockSimulation":
+				window.open(
+					"https://unstop.com/competition/nivesh-a-thon-solutions22-army-institute-of-technology-ait-pune-292557?lb=oMWmuaV",
+					"_blank"
+				);
+				break;
 			default:
 				break;
 		}
