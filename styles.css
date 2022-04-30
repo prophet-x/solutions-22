@@ -431,6 +431,12 @@ body main #event-redirect {
 	color: black;
 }
 
+@media screen and (max-width: 500px) {
+	.event-redirect-btn {
+		font-size: 2rem;
+	}
+}
+
 @media screen and (max-width: 1000px) {
 	body header {
 		position: fixed;
