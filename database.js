@@ -87,6 +87,7 @@ const registerForEvent = async () => {
 		}
 		alert_creator("Successfully Registered for the event.");
 	} else {
+		console.log(user);
 		alert("VERIFY YOUR EMAIL");
 	}
 };

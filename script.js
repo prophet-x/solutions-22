@@ -21,7 +21,7 @@ onAuthStateChanged(auth, (user) => {
 		console.log("user");
 		loginBtn.classList.add("--logged-in");
 		loginBtn.classList.remove("show-modal");
-		window.location = "http://solutions22.in/profile/index.html";
+		//window.location = "http://solutions22.in/profile/index.html";
 	} else {
 		console.log("not user");
 

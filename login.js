@@ -120,8 +120,7 @@ const loginUser = () => {
 	const emailValue = document.querySelector(".login-email");
 	const passwordCode = document.querySelector(".login-password");
 	const user = auth.currentUser;
-	if (user) {
-		signInWithEmailAndPassword(auth, emailValue.value, passwordCode.value)
+	signInWithEmailAndPassword(auth, emailValue.value, passwordCode.value)
 			.then((userCredential) => {
 				const user = userCredential.user;
 			})
@@ -130,8 +129,8 @@ const loginUser = () => {
 				const errorMessage = error.message;
 				alert(errorMessage);
 			});
-	} else {
-		alert("Verify your email");
+	if (!user.emailVerified) {
+		alert("login success");
 	}
 };
 
