@@ -78,8 +78,7 @@ const registerForEvent = async () => {
 				break;
 			case "stockSimulation":
 				window.open(
-					"https://unstop.com/competition/nivesh-a-thon-solutions22-army-institute-of-technology-ait-pune-292557?lb=oMWmuaV",
-					"_blank"
+					"https://docs.google.com/forms/d/e/1FAIpQLSfm7aTZzpSYBO0dH1xvH6K-DlOF0H4lIYfF-oTOkzMgdQw5sQ/viewform"
 				);
 				break;
 			default:
