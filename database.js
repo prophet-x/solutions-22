@@ -81,6 +81,26 @@ const registerForEvent = async () => {
 					"https://docs.google.com/forms/d/e/1FAIpQLSfm7aTZzpSYBO0dH1xvH6K-DlOF0H4lIYfF-oTOkzMgdQw5sQ/viewform"
 				);
 				break;
+			case "codeRed":
+				window.open(
+					"https://unstop.com/p/codered-round-1-solutions22-army-institute-of-technology-ait-pune-298758"
+				);
+				break;
+			case "reverseCode":
+				window.open(
+					"https://unstop.com/p/reversecode-round-1-solutions22-army-institute-of-technology-ait-pune-298331"
+				);
+				break;
+			case "placementApti":
+				window.open(
+					"https://unstop.com/p/placement-apti-solutions22-army-institute-of-technology-ait-pune-299320"
+				);
+				break;
+			case "techMatrix":
+				window.open(
+					"https://unstop.com/p/techmatrix-solutions22-army-institute-of-technology-ait-pune-299650"
+				);
+				break;
 			default:
 				break;
 		}
