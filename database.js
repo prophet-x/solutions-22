@@ -73,9 +73,6 @@ const registerForEvent = async () => {
 			case "gameJam":
 				window.open("https://forms.gle/a4CUtkLhzUrVSJyW7", "_blank");
 				break;
-			case "gameJam":
-				window.open("https://forms.gle/a4CUtkLhzUrVSJyW7", "_blank");
-				break;
 			case "stockSimulation":
 				window.open(
 					"https://docs.google.com/forms/d/e/1FAIpQLSfm7aTZzpSYBO0dH1xvH6K-DlOF0H4lIYfF-oTOkzMgdQw5sQ/viewform"
@@ -99,6 +96,11 @@ const registerForEvent = async () => {
 			case "techMatrix":
 				window.open(
 					"https://unstop.com/p/techmatrix-solutions22-army-institute-of-technology-ait-pune-299650"
+				);
+				break;
+			case "captureTheFlag":
+				window.open(
+					"http://bypass.solutions22.in/"
 				);
 				break;
 			default:
