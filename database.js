@@ -127,3 +127,4 @@ function alert_creator(msg) {
 	};
 }
 
+eventReg.addEventListener('click', registerForEvent);
